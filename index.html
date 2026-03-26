@@ -350,6 +350,7 @@
           <thead>
             <tr>
               <th class="cb-cell"><input type="checkbox"/></th>
+              <th>Status <i class="fas fa-sort sort-icon"></i></th>
               <th></th>
               <th>Label <i class="fas fa-sort sort-icon"></i></th>
               <th>Customer Name <i class="fas fa-sort sort-icon"></i></th>
@@ -357,7 +358,6 @@
               <th>Phone Number <i class="fas fa-sort sort-icon"></i></th>
               <th>Lead Source <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Name <i class="fas fa-sort sort-icon"></i></th>
-              <th id="sales-status-th" style="display:none;">Status <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Stage <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Amount <i class="fas fa-sort sort-icon"></i></th>
               <th>Last Change <i class="fas fa-sort sort-icon"></i></th>
@@ -748,9 +748,8 @@ function jobStatusBadge(record) {
 // RENDER SALES TABLE
 // ═══════════════════════════════════════
 function renderSales() {
-  var tbody = document.getElementById('sales-tbody');
-  var statusTh = document.getElementById('sales-status-th');
-  var helper   = document.getElementById('sales-helper');
+  var tbody  = document.getElementById('sales-tbody');
+  var helper = document.getElementById('sales-helper');
   var rows = '';
   var visible = 0;
 
@@ -758,11 +757,9 @@ function renderSales() {
     if (r.archived && !showArchivedSales) return;
     visible++;
     var rowClass = r.archived ? ' class="archived-row"' : '';
-    var statusCell = showArchivedSales
-      ? '<td>' + dealStatusBadge(r) + '</td>'
-      : '';
     rows += '<tr' + rowClass + '>'
       + '<td class="cb-cell"><input type="checkbox"/></td>'
+      + '<td>' + dealStatusBadge(r) + '</td>'
       + '<td></td>'
       + '<td><span class="add-label-btn">+ add label</span></td>'
       + '<td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> ' + r.customer + '</span></td>'
@@ -772,7 +769,6 @@ function renderSales() {
       + '<td><span class="deal-link" onclick="openDealCC(\'' + r.id + '\')">'
       +   '<span class="deal-icon"><i class="fas fa-sync-alt"></i></span> ' + r.deal
       + '</span></td>'
-      + statusCell
       + '<td>' + dealStageBadge(r.stage) + '</td>'
       + '<td>' + r.amount + '</td>'
       + '<td>' + r.lastChange + '</td>'
@@ -782,7 +778,6 @@ function renderSales() {
   });
 
   tbody.innerHTML = rows;
-  statusTh.style.display = showArchivedSales ? '' : 'none';
   if (showArchivedSales) helper.classList.add('visible');
   else helper.classList.remove('visible');
 
