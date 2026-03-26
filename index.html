@@ -11,13 +11,8 @@
       --dj-purple: #7C3AED;
       --dj-purple-light: #EDE9FE;
       --dj-purple-dark: #5b21b6;
-      --sidebar-bg: #1e1e2e;
-      --sidebar-text: #c4c4d4;
-      --sidebar-active: #7C3AED;
     }
-
     * { box-sizing: border-box; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-size: 13px;
@@ -27,7 +22,7 @@
       height: 100vh;
     }
 
-    /* ── TOPBAR ── */
+    /* TOPBAR */
     .topbar {
       height: 48px;
       background: #fff;
@@ -40,554 +35,140 @@
       z-index: 100;
       gap: 12px;
     }
-    .topbar .logo {
-      font-weight: 800;
-      font-size: 18px;
-      color: var(--dj-purple);
-      letter-spacing: -0.5px;
-      margin-right: 12px;
-    }
-    .topbar .search-bar {
-      flex: 1;
-      max-width: 340px;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 5px 12px;
-      font-size: 12px;
-      color: #6b7280;
-    }
-    .topbar-right {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .topbar-right .avatar {
-      width: 30px; height: 30px;
-      background: var(--dj-purple);
-      border-radius: 50%;
-      color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 700;
-    }
+    .topbar .logo { font-weight: 800; font-size: 18px; color: var(--dj-purple); letter-spacing: -0.5px; margin-right: 12px; }
+    .topbar .search-bar { flex: 1; max-width: 340px; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; padding: 5px 12px; font-size: 12px; color: #6b7280; }
+    .topbar-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+    .topbar-right .avatar { width: 30px; height: 30px; background: var(--dj-purple); border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
     .topbar-right .user-name { font-size: 12px; color: #374151; font-weight: 500; }
+    .admin-badge { display: inline-flex; align-items: center; gap: 4px; background: #EDE9FE; color: var(--dj-purple); border-radius: 4px; padding: 1px 6px; font-size: 10.5px; font-weight: 700; text-transform: uppercase; }
 
-    /* ── SIDEBAR ── */
-    .sidebar {
-      width: 180px;
-      background: #fff;
-      border-right: 1px solid #e5e7eb;
-      position: fixed;
-      top: 48px; left: 0; bottom: 0;
-      overflow-y: auto;
-      z-index: 99;
-      padding: 8px 0;
-    }
-    .sidebar-section {
-      padding: 14px 14px 4px;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: #9ca3af;
-    }
-    .sidebar-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      color: #374151;
-      font-size: 12.5px;
-      cursor: pointer;
-      border-radius: 6px;
-      margin: 1px 6px;
-      transition: background 0.15s;
-      text-decoration: none;
-    }
+    /* SIDEBAR */
+    .sidebar { width: 180px; background: #fff; border-right: 1px solid #e5e7eb; position: fixed; top: 48px; left: 0; bottom: 0; overflow-y: auto; z-index: 99; padding: 8px 0; }
+    .sidebar-section { padding: 14px 14px 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #9ca3af; }
+    .sidebar-item { display: flex; align-items: center; gap: 8px; padding: 7px 14px; color: #374151; font-size: 12.5px; cursor: pointer; border-radius: 6px; margin: 1px 6px; transition: background 0.15s; text-decoration: none; }
     .sidebar-item:hover { background: #f3f4f6; color: #111; text-decoration: none; }
-    .sidebar-item.active {
-      background: var(--dj-purple-light);
-      color: var(--dj-purple);
-      font-weight: 600;
-    }
+    .sidebar-item.active { background: var(--dj-purple-light); color: var(--dj-purple); font-weight: 600; }
     .sidebar-item i { width: 16px; text-align: center; font-size: 12px; opacity: 0.7; }
     .sidebar-item.active i { opacity: 1; }
-    .badge-pill-sm {
-      background: var(--dj-purple);
-      color: #fff;
-      font-size: 10px;
-      padding: 1px 5px;
-      border-radius: 10px;
-      margin-left: auto;
-    }
-    .sidebar-workspace {
-      padding: 10px 14px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-bottom: 1px solid #f0f0f5;
-    }
-    .workspace-icon {
-      width: 28px; height: 28px;
-      background: var(--dj-purple-light);
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; color: var(--dj-purple);
-    }
+    .badge-pill-sm { background: var(--dj-purple); color: #fff; font-size: 10px; padding: 1px 5px; border-radius: 10px; margin-left: auto; }
+    .sidebar-workspace { padding: 10px 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #f0f0f5; }
+    .workspace-icon { width: 28px; height: 28px; background: var(--dj-purple-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--dj-purple); }
     .workspace-name { font-weight: 600; font-size: 12px; color: #111; }
 
-    /* ── MAIN CONTENT ── */
-    .main-content {
-      margin-left: 180px;
-      margin-top: 48px;
-      padding: 24px;
-      height: calc(100vh - 48px);
-      overflow-y: auto;
-      background: #f5f5f8;
-    }
-
-    /* ── PAGE HEADER ── */
+    /* MAIN */
+    .main-content { margin-left: 180px; margin-top: 48px; padding: 24px; height: calc(100vh - 48px); overflow-y: auto; background: #f5f5f8; }
     .page-header { margin-bottom: 16px; }
     .page-header h1 { font-size: 22px; font-weight: 700; color: #111; margin: 0 0 2px; }
     .page-header .totals { font-size: 13px; color: #6b7280; }
     .page-header .totals strong { color: #111; }
+    .header-actions { display: flex; gap: 8px; align-items: center; }
 
-    /* ── ACTION BUTTONS ── */
-    .header-actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .btn-dj-primary {
-      background: var(--dj-purple);
-      border: none;
-      color: #fff;
-      border-radius: 6px;
-      padding: 7px 14px;
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+    /* BUTTONS */
+    .btn-dj-primary { background: var(--dj-purple); border: none; color: #fff; border-radius: 6px; padding: 7px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; white-space: nowrap; }
     .btn-dj-primary:hover { background: var(--dj-purple-dark); color: #fff; }
-    .btn-outline-dj {
-      background: #fff;
-      border: 1px solid #d1d5db;
-      color: #374151;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 12px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+    .btn-outline-dj { background: #fff; border: 1px solid #d1d5db; color: #374151; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; white-space: nowrap; }
     .btn-outline-dj:hover { background: #f9f9fb; }
+    .btn-green { background: #059669; border: none; color: #fff; border-radius: 6px; padding: 7px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+    .btn-green:hover { background: #047857; }
+    .btn-danger { background: #dc2626; border: none; color: #fff; border-radius: 6px; padding: 7px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+    .btn-danger:hover { background: #b91c1c; }
 
-    /* ── FILTER BAR ── */
-    .filter-bar {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .filter-bar .filter-group {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .filter-bar .filter-label {
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #9ca3af;
-    }
-    .filter-select {
-      border: 1px solid #d1d5db;
-      border-radius: 5px;
-      padding: 5px 8px;
-      font-size: 12px;
-      color: #374151;
-      background: #fff;
-      cursor: pointer;
-      min-width: 110px;
-    }
-    .filter-bar .go-reset {
-      display: flex;
-      gap: 6px;
-      align-items: flex-end;
-      padding-top: 14px;
-    }
-    .btn-go {
-      background: var(--dj-purple);
-      border: none;
-      color: #fff;
-      border-radius: 5px;
-      padding: 5px 14px;
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn-reset {
-      background: #fff;
-      border: 1px solid #d1d5db;
-      color: #6b7280;
-      border-radius: 5px;
-      padding: 5px 12px;
-      font-size: 12px;
-      cursor: pointer;
-    }
+    /* FILTER BAR */
+    .filter-bar { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .filter-group { display: flex; flex-direction: column; gap: 3px; }
+    .filter-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; }
+    .filter-select { border: 1px solid #d1d5db; border-radius: 5px; padding: 5px 8px; font-size: 12px; color: #374151; background: #fff; cursor: pointer; min-width: 110px; }
+    .go-reset { display: flex; gap: 6px; align-items: flex-end; padding-top: 14px; }
+    .btn-go { background: var(--dj-purple); border: none; color: #fff; border-radius: 5px; padding: 5px 14px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+    .btn-reset { background: #fff; border: 1px solid #d1d5db; color: #6b7280; border-radius: 5px; padding: 5px 12px; font-size: 12px; cursor: pointer; }
 
-    /* ── SHOW ARCHIVED TOGGLE ── */
-    .show-archived-group {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      margin-left: auto;
-    }
-    .show-archived-label {
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #9ca3af;
-    }
-    .toggle-row {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .toggle-switch {
-      position: relative;
-      width: 38px;
-      height: 20px;
-      flex-shrink: 0;
-    }
+    /* SHOW ARCHIVED TOGGLE */
+    .show-archived-group { display: flex; flex-direction: column; gap: 3px; margin-left: auto; }
+    .show-archived-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; }
+    .toggle-row { display: flex; align-items: center; gap: 7px; }
+    .toggle-switch { position: relative; width: 38px; height: 20px; flex-shrink: 0; }
     .toggle-switch input { opacity: 0; width: 0; height: 0; }
-    .toggle-slider {
-      position: absolute;
-      inset: 0;
-      background: #d1d5db;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .toggle-slider:before {
-      content: "";
-      position: absolute;
-      width: 14px; height: 14px;
-      left: 3px; top: 3px;
-      background: #fff;
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
+    .toggle-slider { position: absolute; inset: 0; background: #d1d5db; border-radius: 20px; cursor: pointer; transition: background 0.2s; }
+    .toggle-slider:before { content: ""; position: absolute; width: 14px; height: 14px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: transform 0.2s; }
     .toggle-switch input:checked + .toggle-slider { background: var(--dj-purple); }
     .toggle-switch input:checked + .toggle-slider:before { transform: translateX(18px); }
-    .toggle-text {
-      font-size: 12.5px;
-      font-weight: 500;
-      color: #374151;
-      white-space: nowrap;
-    }
+    .toggle-text { font-size: 12.5px; font-weight: 500; color: #374151; white-space: nowrap; }
 
-    /* ── HELPER TEXT ── */
-    .archived-helper {
-      display: none;
-      align-items: center;
-      gap: 6px;
-      background: #FEF3C7;
-      border: 1px solid #F59E0B;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 12px;
-      color: #92400E;
-      margin-bottom: 10px;
-    }
+    /* HELPER TEXT */
+    .archived-helper { display: none; align-items: center; gap: 6px; background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 6px; padding: 6px 12px; font-size: 12px; color: #92400E; margin-bottom: 10px; }
     .archived-helper.visible { display: flex; }
     .archived-helper i { color: #F59E0B; flex-shrink: 0; }
 
-    /* ── TABLE ── */
-    .list-table-wrap {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .list-table-toolbar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-bottom: 1px solid #f0f0f5;
-    }
-    .list-table-toolbar .search-wrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+    /* TABLE */
+    .list-table-wrap { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+    .list-table-toolbar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #f0f0f5; }
     .list-table-toolbar label { font-size: 12px; color: #6b7280; margin: 0; }
-    .list-table-toolbar input[type="text"] {
-      border: 1px solid #d1d5db;
-      border-radius: 5px;
-      padding: 4px 8px;
-      font-size: 12px;
-      width: 160px;
-    }
-    .show-entries {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: auto;
-      font-size: 12px;
-      color: #6b7280;
-    }
-    .show-entries select {
-      border: 1px solid #d1d5db;
-      border-radius: 4px;
-      padding: 3px 6px;
-      font-size: 12px;
-    }
-    table.dj-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
-    table.dj-table thead th {
-      background: #f9fafb;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 8px 10px;
-      font-weight: 600;
-      color: #374151;
-      white-space: nowrap;
-      cursor: pointer;
-      user-select: none;
-    }
+    .list-table-toolbar input[type="text"] { border: 1px solid #d1d5db; border-radius: 5px; padding: 4px 8px; font-size: 12px; width: 160px; }
+    .show-entries { display: flex; align-items: center; gap: 6px; margin-left: auto; font-size: 12px; color: #6b7280; }
+    .show-entries select { border: 1px solid #d1d5db; border-radius: 4px; padding: 3px 6px; font-size: 12px; }
+    .table-scroll { overflow-x: auto; }
+    table.dj-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    table.dj-table thead th { background: #f9fafb; border-bottom: 1px solid #e5e7eb; padding: 8px 10px; font-weight: 600; color: #374151; white-space: nowrap; cursor: pointer; user-select: none; }
     table.dj-table thead th:hover { background: #f3f4f6; }
     table.dj-table thead th .sort-icon { color: #9ca3af; font-size: 10px; margin-left: 3px; }
-    table.dj-table tbody tr {
-      border-bottom: 1px solid #f3f4f6;
-      transition: background 0.1s;
-    }
+    table.dj-table tbody tr { border-bottom: 1px solid #f3f4f6; transition: background 0.1s; }
     table.dj-table tbody tr:last-child { border-bottom: none; }
     table.dj-table tbody tr:hover { background: #fafafa; }
     table.dj-table tbody tr.archived-row { background: #fdf4ff; }
     table.dj-table tbody tr.archived-row:hover { background: #f5e6ff; }
     table.dj-table tbody td { padding: 8px 10px; color: #374151; vertical-align: middle; }
-    table.dj-table tbody td.hidden-archived { display: none; }
-
     .cb-cell { width: 30px; text-align: center; }
-    .add-label-btn {
-      color: #9ca3af;
-      font-size: 11px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .add-label-btn:hover { color: var(--dj-purple); }
-    .contact-link {
-      color: var(--dj-purple);
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-    }
+    .add-label-btn { color: #9ca3af; font-size: 11px; cursor: pointer; white-space: nowrap; }
+    .contact-link { color: var(--dj-purple); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; }
     .contact-link:hover { text-decoration: underline; }
-    .contact-link .contact-icon {
-      width: 16px; height: 16px;
-      border: 1.5px solid #9ca3af;
-      border-radius: 50%;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 8px;
-    }
-    .deal-link {
-      color: var(--dj-purple);
-      text-decoration: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
+    .contact-icon { width: 16px; height: 16px; border: 1.5px solid #9ca3af; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 8px; }
+    .deal-link { color: var(--dj-purple); text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
     .deal-link:hover { text-decoration: underline; }
-    .deal-link .deal-icon {
-      width: 14px; height: 14px;
-      border: 1.5px solid var(--dj-purple);
-      border-radius: 3px;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 7px;
-      color: var(--dj-purple);
-      flex-shrink: 0;
-    }
-    .stage-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 11px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-    .stage-cold { background: #dbeafe; color: #1e40af; }
-    .stage-estimate-req { background: #fef9c3; color: #854d0e; }
-    .stage-estimate-sched { background: #fef3c7; color: #92400e; }
-    .stage-draft { background: #f3f4f6; color: #374151; }
-    .stage-proj-accepted { background: #d1fae5; color: #065f46; }
-    .stage-cancelled {
-      background: #fee2e2;
-      color: #b91c1c;
-      font-weight: 600;
-    }
-    .status-accepted {
-      background: #d1fae5;
-      color: #065f46;
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-    .status-completed {
-      background: #dbeafe;
-      color: #1e40af;
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 11px;
-      font-weight: 600;
-    }
+    .deal-icon { width: 14px; height: 14px; border: 1.5px solid var(--dj-purple); border-radius: 3px; display: inline-flex; align-items: center; justify-content: center; font-size: 7px; color: var(--dj-purple); flex-shrink: 0; }
 
-    /* ── PAGINATION ── */
-    .table-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      border-top: 1px solid #f0f0f5;
-      font-size: 12px;
-      color: #6b7280;
-    }
-    .pagination-btns {
-      display: flex;
-      gap: 4px;
-    }
-    .page-btn {
-      border: 1px solid #d1d5db;
-      background: #fff;
-      color: #374151;
-      border-radius: 4px;
-      padding: 4px 9px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .page-btn.active {
-      background: var(--dj-purple);
-      border-color: var(--dj-purple);
-      color: #fff;
-      font-weight: 600;
-    }
+    /* STATUS BADGES */
+    .stage-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap; }
+    .badge-open     { background: #d1fae5; color: #065f46; }
+    .badge-scheduled{ background: #dbeafe; color: #1e40af; }
+    .badge-pending  { background: #fef9c3; color: #854d0e; }
+    .badge-cancelled{ background: #fee2e2; color: #b91c1c; font-weight: 600; }
+    .badge-accepted { background: #d1fae5; color: #065f46; }
+    .badge-completed{ background: #dbeafe; color: #1e40af; }
+    /* pipeline stage labels (Deal Stage column - unchanged) */
+    .stage-cold     { background: #dbeafe; color: #1e40af; }
+    .stage-est-req  { background: #fef9c3; color: #854d0e; }
+    .stage-est-sched{ background: #fef3c7; color: #92400e; }
+    .stage-draft    { background: #f3f4f6; color: #374151; }
+    .stage-accepted { background: #d1fae5; color: #065f46; }
+
+    /* PAGINATION */
+    .table-footer { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-top: 1px solid #f0f0f5; font-size: 12px; color: #6b7280; }
+    .pagination-btns { display: flex; gap: 4px; }
+    .page-btn { border: 1px solid #d1d5db; background: #fff; color: #374151; border-radius: 4px; padding: 4px 9px; font-size: 12px; cursor: pointer; }
+    .page-btn.active { background: var(--dj-purple); border-color: var(--dj-purple); color: #fff; font-weight: 600; }
     .page-btn:hover:not(.active) { background: #f3f4f6; }
     .page-btn:disabled { opacity: 0.4; cursor: default; }
 
-    /* ── MODAL OVERLAY ── */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 500;
-      align-items: center;
-      justify-content: center;
-    }
+    /* MODAL OVERLAY */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 500; align-items: center; justify-content: center; }
     .modal-overlay.open { display: flex; }
 
-    /* ── COMMAND CENTER MODAL ── */
-    .cc-modal {
-      width: 820px;
-      max-width: 95vw;
-      max-height: 90vh;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      position: relative;
-    }
-    .cc-modal-close {
-      position: absolute;
-      top: 12px; right: 14px;
-      font-size: 18px;
-      color: #6b7280;
-      cursor: pointer;
-      z-index: 10;
-      line-height: 1;
-    }
+    /* COMMAND CENTER MODAL */
+    .cc-modal { width: 820px; max-width: 95vw; max-height: 90vh; background: #fff; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.25); position: relative; }
+    .cc-modal-close { position: absolute; top: 12px; right: 14px; font-size: 18px; color: #6b7280; cursor: pointer; z-index: 10; line-height: 1; }
     .cc-modal-close:hover { color: #111; }
     .cc-body { display: flex; flex: 1; overflow: hidden; }
 
     /* LEFT PANEL */
-    .cc-left {
-      width: 210px;
-      border-right: 1px solid #e5e7eb;
-      padding: 16px;
-      overflow-y: auto;
-      flex-shrink: 0;
-    }
-    .cc-top-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
+    .cc-left { width: 210px; border-right: 1px solid #e5e7eb; padding: 16px; overflow-y: auto; flex-shrink: 0; }
+    .cc-top-actions { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .cc-add-label { font-size: 11px; color: #9ca3af; cursor: pointer; }
-    .cc-edit-btn {
-      width: 26px; height: 26px;
-      border: 1px solid #e5e7eb;
-      border-radius: 5px;
-      background: #fff;
-      color: #6b7280;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px;
-      cursor: pointer;
-      margin-left: auto;
-    }
-    .cc-kebab {
-      width: 26px; height: 26px;
-      border: 1px solid #e5e7eb;
-      border-radius: 5px;
-      background: #fff;
-      color: #6b7280;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px;
-      cursor: pointer;
-      position: relative;
-    }
+    .cc-edit-btn { width: 26px; height: 26px; border: 1px solid #e5e7eb; border-radius: 5px; background: #fff; color: #6b7280; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; margin-left: auto; }
+    .cc-kebab { width: 26px; height: 26px; border: 1px solid #e5e7eb; border-radius: 5px; background: #fff; color: #6b7280; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; position: relative; }
     .cc-kebab:hover { background: #f3f4f6; }
-    .kebab-menu {
-      display: none;
-      position: absolute;
-      top: 30px; right: 0;
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-      min-width: 150px;
-      z-index: 20;
-      overflow: hidden;
-    }
+    .kebab-menu { display: none; position: absolute; top: 30px; right: 0; background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 150px; z-index: 20; overflow: hidden; }
     .kebab-menu.open { display: block; }
-    .kebab-item {
-      padding: 9px 14px;
-      font-size: 12.5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #374151;
-    }
+    .kebab-item { padding: 9px 14px; font-size: 12.5px; cursor: pointer; display: flex; align-items: center; gap: 8px; color: #374151; }
     .kebab-item:hover { background: #f3f4f6; }
     .kebab-item.danger { color: #dc2626; }
     .kebab-item.danger:hover { background: #fef2f2; }
@@ -597,352 +178,77 @@
     .cc-name { font-size: 16px; font-weight: 700; color: #111; margin: 0 0 2px; }
     .cc-meta { font-size: 11px; color: #6b7280; margin-bottom: 12px; }
     .cc-action-btns { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
-    .btn-cc-action {
-      flex: 1;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      padding: 6px 8px;
-      font-size: 11.5px;
-      font-weight: 500;
-      cursor: pointer;
-      background: #fff;
-      text-align: center;
-      white-space: nowrap;
-      color: #374151;
-    }
-    .btn-cc-action.primary {
-      background: var(--dj-purple);
-      border-color: var(--dj-purple);
-      color: #fff;
-    }
+    .btn-cc-action { flex: 1; border: 1px solid #d1d5db; border-radius: 6px; padding: 6px 8px; font-size: 11.5px; font-weight: 500; cursor: pointer; background: #fff; text-align: center; white-space: nowrap; color: #374151; }
+    .btn-cc-action.primary { background: var(--dj-purple); border-color: var(--dj-purple); color: #fff; }
     .btn-cc-action:hover:not(.primary) { background: #f3f4f6; }
     .btn-cc-action.primary:hover { background: var(--dj-purple-dark); }
 
-    .cc-section-title {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: #9ca3af;
-      margin: 12px 0 6px;
-    }
-    .cc-info-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 6px;
-      font-size: 12px;
-    }
+    .cc-section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #9ca3af; margin: 12px 0 6px; }
+    .cc-info-row { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 6px; font-size: 12px; }
     .cc-info-row i { color: #9ca3af; width: 14px; flex-shrink: 0; margin-top: 1px; }
     .cc-info-val { color: #374151; }
     .cc-info-link { color: var(--dj-purple); cursor: pointer; }
-    .cc-info-link:hover { text-decoration: underline; }
 
-    .cc-stage-strip {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 8px 10px;
-      margin-bottom: 8px;
-      font-size: 12px;
-    }
-    .cc-stage-strip .label { font-weight: 500; color: #6b7280; margin-right: 4px; }
-    .cc-stage-strip .val { font-weight: 700; color: #111; }
-    .cc-stage-strip .btn-move {
-      float: right;
-      background: #fff;
-      border: 1px solid #d1d5db;
-      border-radius: 4px;
-      padding: 2px 8px;
-      font-size: 11px;
-      cursor: pointer;
-      color: #374151;
-    }
-    .cc-stage-strip .btn-move:hover { background: #f3f4f6; }
-
-    .archived-banner {
-      background: #fee2e2;
-      border: 1px solid #fca5a5;
-      border-radius: 6px;
-      padding: 8px 10px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      color: #b91c1c;
-    }
+    .archived-banner { background: #fee2e2; border: 1px solid #fca5a5; border-radius: 6px; padding: 8px 10px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #b91c1c; }
     .archived-banner i { flex-shrink: 0; }
-    .archived-banner strong { font-weight: 700; }
 
     /* RIGHT PANEL */
-    .cc-right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .cc-header-strip {
-      padding: 12px 16px;
-      border-bottom: 1px solid #e5e7eb;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .cc-header-stage { font-size: 12px; }
-    .cc-header-stage .lbl { color: #6b7280; margin-right: 4px; }
-    .cc-header-stage .val { font-weight: 700; color: #111; }
-    .cc-header-seq { font-size: 12px; }
-    .cc-header-seq .lbl { color: #6b7280; margin-right: 4px; }
-    .cc-header-seq .val { font-weight: 700; color: #111; }
+    .cc-right { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .cc-header-strip { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .cc-header-stage .lbl { color: #6b7280; margin-right: 4px; font-size: 12px; }
+    .cc-header-stage .val { font-weight: 700; color: #111; font-size: 12px; }
+    .cc-header-seq .lbl { color: #6b7280; margin-right: 4px; font-size: 12px; }
+    .cc-header-seq .val { font-weight: 700; color: #111; font-size: 12px; }
     .cc-updated { margin-left: auto; font-size: 11px; color: #9ca3af; }
-    .btn-stage-change {
-      border: 1px solid #d1d5db;
-      background: #fff;
-      border-radius: 4px;
-      padding: 2px 9px;
-      font-size: 11px;
-      cursor: pointer;
-      color: #374151;
-    }
+    .btn-stage-change { border: 1px solid #d1d5db; background: #fff; border-radius: 4px; padding: 2px 9px; font-size: 11px; cursor: pointer; color: #374151; }
     .btn-stage-change:hover { background: #f3f4f6; }
-
-    .cc-disable-drips {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      color: #374151;
-    }
+    .cc-disable-drips { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #374151; }
 
     /* TABS */
-    .cc-tabs {
-      display: flex;
-      gap: 2px;
-      padding: 10px 16px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .cc-tab {
-      padding: 7px 12px;
-      border-radius: 6px 6px 0 0;
-      font-size: 12px;
-      cursor: pointer;
-      color: #6b7280;
-      font-weight: 500;
-      white-space: nowrap;
-      border: 1px solid transparent;
-      border-bottom: none;
-    }
+    .cc-tabs { display: flex; gap: 2px; padding: 10px 16px 0; border-bottom: 1px solid #e5e7eb; }
+    .cc-tab { padding: 7px 12px; border-radius: 6px 6px 0 0; font-size: 12px; cursor: pointer; color: #6b7280; font-weight: 500; white-space: nowrap; border: 1px solid transparent; border-bottom: none; }
     .cc-tab:hover { color: #111; background: #f9fafb; }
-    .cc-tab.active {
-      background: #fff;
-      color: var(--dj-purple);
-      font-weight: 700;
-      border-color: #e5e7eb;
-      margin-bottom: -1px;
-    }
-    .cc-tab-dot {
-      display: inline-block;
-      width: 6px; height: 6px;
-      background: var(--dj-purple);
-      border-radius: 50%;
-      margin-left: 4px;
-      vertical-align: middle;
-    }
+    .cc-tab.active { background: #fff; color: var(--dj-purple); font-weight: 700; border-color: #e5e7eb; margin-bottom: -1px; }
+    .cc-tab-dot { display: inline-block; width: 6px; height: 6px; background: var(--dj-purple); border-radius: 50%; margin-left: 4px; vertical-align: middle; }
+    .cc-tab-content { flex: 1; overflow-y: auto; padding: 16px; }
 
-    .cc-tab-content {
-      flex: 1;
-      overflow-y: auto;
-      padding: 16px;
-    }
-
-    /* CHAT CONTENT */
-    .chat-date-divider {
-      text-align: center;
-      font-size: 11px;
-      color: #9ca3af;
-      margin: 10px 0;
-      position: relative;
-    }
-    .chat-date-divider::before, .chat-date-divider::after {
-      content: "";
-      display: inline-block;
-      width: 35%;
-      height: 1px;
-      background: #e5e7eb;
-      vertical-align: middle;
-      margin: 0 6px;
-    }
+    /* CHAT */
+    .chat-date-divider { text-align: center; font-size: 11px; color: #9ca3af; margin: 10px 0; position: relative; }
+    .chat-date-divider::before, .chat-date-divider::after { content: ""; display: inline-block; width: 35%; height: 1px; background: #e5e7eb; vertical-align: middle; margin: 0 6px; }
     .chat-bubble-wrap { display: flex; justify-content: flex-end; margin-bottom: 8px; }
-    .chat-bubble {
-      background: #7C3AED22;
-      border-radius: 10px 10px 2px 10px;
-      padding: 8px 12px;
-      font-size: 12px;
-      color: #374151;
-      max-width: 70%;
-    }
+    .chat-bubble { background: #7C3AED22; border-radius: 10px 10px 2px 10px; padding: 8px 12px; font-size: 12px; color: #374151; max-width: 70%; }
     .chat-bubble .meta { font-size: 10px; color: #9ca3af; margin-top: 3px; text-align: right; }
-    .chat-input-bar {
-      border-top: 1px solid #e5e7eb;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .chat-input-bar input {
-      flex: 1;
-      border: 1px solid #d1d5db;
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 12.5px;
-      outline: none;
-    }
-    .chat-input-bar .add-btn {
-      width: 28px; height: 28px;
-      border: 1.5px solid #d1d5db;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #9ca3af;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .chat-input-bar .send-btn {
-      width: 28px; height: 28px;
-      background: var(--dj-purple);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff;
-      cursor: pointer;
-      font-size: 11px;
-    }
+    .chat-input-bar { border-top: 1px solid #e5e7eb; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+    .chat-input-bar input { flex: 1; border: 1px solid #d1d5db; border-radius: 20px; padding: 7px 14px; font-size: 12.5px; outline: none; }
+    .chat-input-bar .add-btn { width: 28px; height: 28px; border: 1.5px solid #d1d5db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #9ca3af; cursor: pointer; font-size: 14px; }
+    .chat-input-bar .send-btn { width: 28px; height: 28px; background: var(--dj-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; font-size: 11px; }
 
-    /* ── STAGE MOVE MODAL ── */
-    .stage-modal {
-      background: #fff;
-      border-radius: 10px;
-      width: 420px;
-      max-width: 95vw;
-      padding: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-    }
+    /* STAGE MOVE MODAL */
+    .stage-modal { background: #fff; border-radius: 10px; width: 420px; max-width: 95vw; padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
     .stage-modal h3 { font-size: 16px; font-weight: 700; margin: 0 0 6px; }
     .stage-modal p { font-size: 12.5px; color: #6b7280; margin-bottom: 14px; }
-    .stage-option {
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12.5px;
-      color: #374151;
-      transition: border-color 0.15s;
-    }
+    .stage-option { border: 1px solid #e5e7eb; border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #374151; transition: border-color 0.15s; }
     .stage-option:hover { border-color: var(--dj-purple); background: var(--dj-purple-light); color: var(--dj-purple); }
     .stage-option.selected { border-color: var(--dj-purple); background: var(--dj-purple-light); color: var(--dj-purple); }
     .stage-option i { color: #9ca3af; }
     .stage-option:hover i, .stage-option.selected i { color: var(--dj-purple); }
     .stage-modal-actions { display: flex; gap: 8px; margin-top: 16px; justify-content: flex-end; }
 
-    /* ── UNARCHIVE CONFIRM MODAL ── */
-    .confirm-modal {
-      background: #fff;
-      border-radius: 10px;
-      width: 380px;
-      max-width: 95vw;
-      padding: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      text-align: center;
-    }
-    .confirm-modal .confirm-icon {
-      width: 52px; height: 52px;
-      background: #d1fae5;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 14px;
-      font-size: 22px;
-      color: #059669;
-    }
+    /* CONFIRM MODAL */
+    .confirm-modal { background: #fff; border-radius: 10px; width: 380px; max-width: 95vw; padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); text-align: center; }
+    .confirm-icon { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 22px; }
+    .confirm-icon.archive { background: #FEF3C7; color: #D97706; }
+    .confirm-icon.unarchive { background: #D1FAE5; color: #059669; }
     .confirm-modal h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
     .confirm-modal p { font-size: 12.5px; color: #6b7280; margin-bottom: 18px; }
     .confirm-modal-actions { display: flex; gap: 8px; justify-content: center; }
 
-    /* ── TOAST ── */
-    .toast-msg {
-      position: fixed;
-      bottom: 24px; right: 24px;
-      background: #059669;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 500;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-      z-index: 999;
-      display: none;
-      align-items: center;
-      gap: 8px;
-      transition: opacity 0.3s;
-    }
+    /* TOAST */
+    .toast-msg { position: fixed; bottom: 24px; right: 24px; background: #059669; color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 999; display: none; align-items: center; gap: 8px; }
     .toast-msg.show { display: flex; }
+    .toast-msg.warning { background: #D97706; }
 
-    /* ── ANNOTATION CALLOUTS ── */
-    .annotation {
-      background: #FFFBEB;
-      border: 1.5px dashed #F59E0B;
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 11.5px;
-      color: #78350F;
-      margin-bottom: 8px;
-    }
-    .annotation strong { color: #92400E; }
-
-    /* ── ADMIN BADGE ── */
-    .admin-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: #EDE9FE;
-      color: var(--dj-purple);
-      border-radius: 4px;
-      padding: 1px 6px;
-      font-size: 10.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    /* ── SCROLLABLE TABLE ── */
-    .table-scroll { overflow-x: auto; }
-
-    /* ── VIEW TABS ── */
-    .view-nav {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 14px;
-    }
-    .view-tab {
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 12.5px;
-      font-weight: 500;
-      cursor: pointer;
-      border: 1px solid #d1d5db;
-      background: #fff;
-      color: #374151;
-    }
-    .view-tab.active {
-      background: var(--dj-purple);
-      border-color: var(--dj-purple);
-      color: #fff;
-      font-weight: 600;
-    }
-    .view-tab:hover:not(.active) { background: #f3f4f6; }
-
-    /* view panels */
+    /* VIEW PANELS */
     .view-panel { display: none; }
     .view-panel.active { display: block; }
   </style>
@@ -992,17 +298,12 @@
 </nav>
 
 <!-- MAIN CONTENT -->
-<div class="main-content" id="main-content">
+<div class="main-content">
 
-  <!-- ═══════════════════════════════════════════════
-       SALES LIST VIEW
-  ═══════════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       SALES LIST
+  ══════════════════════════════════════ -->
   <div class="view-panel active" id="view-sales">
-
-    <div class="annotation">
-      <strong>Prototype Note — BR-5/6:</strong> The "Show Archived" toggle is visible only to Admin users and Super Admins. Standard/salesperson roles see no toggle and no archived records. The <span class="admin-badge"><i class="fas fa-shield-alt"></i> Admin</span> badge in the topbar reflects the current user's role.
-    </div>
-
     <div class="d-flex align-items-start justify-content-between mb-2 flex-wrap" style="gap:10px;">
       <div class="page-header mb-0">
         <h1>Sales List</h1>
@@ -1016,86 +317,47 @@
       </div>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
-      <div class="filter-group">
-        <span class="filter-label">Filter Preset</span>
-        <select class="filter-select"><option>Default</option><option>My Deals</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Salesperson</span>
-        <select class="filter-select"><option>All Salespeople</option><option>Jeremy Harrison</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Labels</span>
-        <select class="filter-select"><option>All Labels</option><option>Call Back</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Deal Stage</span>
-        <select class="filter-select"><option>All Deal Stages</option><option>Cold Leads</option><option>Estimate Requested</option><option>In Draft</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Lead Source</span>
-        <select class="filter-select"><option>All Lead Sources</option><option>Google</option><option>Facebook</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Created Date</span>
-        <select class="filter-select"><option>Last 90 Days</option><option>Last 30 Days</option><option>All Time</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Changed Date</span>
-        <select class="filter-select"><option>Anytime</option><option>Today</option></select>
-      </div>
-      <div class="go-reset">
-        <button class="btn-go">Go</button>
-        <button class="btn-reset">Reset</button>
-      </div>
-
-      <!-- ★ NEW: Show Archived Toggle -->
+      <div class="filter-group"><span class="filter-label">Filter Preset</span><select class="filter-select"><option>Default</option><option>My Deals</option></select></div>
+      <div class="filter-group"><span class="filter-label">Salesperson</span><select class="filter-select"><option>All Salespeople</option><option>Jeremy Harrison</option></select></div>
+      <div class="filter-group"><span class="filter-label">Labels</span><select class="filter-select"><option>All Labels</option><option>Call Back</option></select></div>
+      <div class="filter-group"><span class="filter-label">Deal Stage</span><select class="filter-select"><option>All Deal Stages</option><option>Cold Leads</option><option>Estimate Requested</option><option>In Draft</option></select></div>
+      <div class="filter-group"><span class="filter-label">Lead Source</span><select class="filter-select"><option>All Lead Sources</option><option>Google</option><option>Facebook</option></select></div>
+      <div class="filter-group"><span class="filter-label">Created Date</span><select class="filter-select"><option>Last 90 Days</option><option>Last 30 Days</option><option>All Time</option></select></div>
+      <div class="filter-group"><span class="filter-label">Changed Date</span><select class="filter-select"><option>Anytime</option><option>Today</option></select></div>
+      <div class="go-reset"><button class="btn-go">Go</button><button class="btn-reset">Reset</button></div>
       <div class="show-archived-group">
         <span class="show-archived-label">Archived</span>
         <div class="toggle-row">
-          <label class="toggle-switch">
-            <input type="checkbox" id="sales-archived-toggle" onchange="toggleSalesArchived(this)" />
-            <span class="toggle-slider"></span>
-          </label>
+          <label class="toggle-switch"><input type="checkbox" id="sales-archived-toggle" onchange="toggleArchived('sales',this)" /><span class="toggle-slider"></span></label>
           <span class="toggle-text">Show Archived</span>
         </div>
       </div>
     </div>
 
-    <!-- ★ NEW: Helper text (visible when toggle is ON) -->
     <div class="archived-helper" id="sales-helper">
       <i class="fas fa-info-circle"></i>
-      <span>Archived Deals are included in the list below. They appear with a <strong>Status of "Cancelled"</strong> in the Status column.</span>
+      <span>Archived Deals are included below. They appear with a <strong>Status of "Cancelled."</strong></span>
     </div>
 
-    <!-- Table -->
     <div class="list-table-wrap">
       <div class="list-table-toolbar">
-        <div class="search-wrap">
-          <label>Search:</label>
-          <input type="text" placeholder="" />
-        </div>
-        <div class="show-entries">
-          Show <select><option>25</option><option>50</option><option>100</option></select> entries
-        </div>
+        <label>Search:</label><input type="text" placeholder="" />
+        <div class="show-entries">Show <select><option>25</option><option>50</option><option>100</option></select> entries</div>
       </div>
-
       <div class="table-scroll">
         <table class="dj-table" id="sales-table">
           <thead>
             <tr>
-              <th class="cb-cell"><input type="checkbox" /></th>
-              <th></th><!-- drag handle -->
+              <th class="cb-cell"><input type="checkbox"/></th>
+              <th></th>
               <th>Label <i class="fas fa-sort sort-icon"></i></th>
               <th>Customer Name <i class="fas fa-sort sort-icon"></i></th>
               <th>Email <i class="fas fa-sort sort-icon"></i></th>
               <th>Phone Number <i class="fas fa-sort sort-icon"></i></th>
               <th>Lead Source <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Name <i class="fas fa-sort sort-icon"></i></th>
-              <!-- ★ NEW Status column -->
-              <th id="sales-status-col" style="display:none;">Status <i class="fas fa-sort sort-icon"></i></th>
+              <th id="sales-status-th" style="display:none;">Status <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Stage <i class="fas fa-sort sort-icon"></i></th>
               <th>Deal Amount <i class="fas fa-sort sort-icon"></i></th>
               <th>Last Change <i class="fas fa-sort sort-icon"></i></th>
@@ -1103,136 +365,13 @@
               <th>Salesperson <i class="fas fa-sort sort-icon"></i></th>
             </tr>
           </thead>
-          <tbody>
-            <!-- Active rows -->
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Laura Close</span></td>
-              <td>laura.cuadros+close@dripjobs.com</td><td>(659) 235-3226</td><td>Fortune Cookie</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> SMS Testing</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-cold">Cold Leads</span></td>
-              <td><span class="stage-badge stage-cold">Cold Leads</span></td>
-              <td>$0.00</td><td>16d</td><td>16d</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Jesus Google Voice...</span></td>
-              <td>jesus.rubio+googlevoice@dripjobs.com</td><td>(352) 234-3554</td><td>A Little Bird</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Google Voice</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-cold">Cold Leads</span></td>
-              <td><span class="stage-badge stage-cold">Cold Leads</span></td>
-              <td>$0.00</td><td>3h</td><td>3h</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Michael Dorsey</span></td>
-              <td>MichaelD@DJTest.com</td><td>(770) 555-1980</td><td>A Little Bird</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Michael Dorsey</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td>$0.00</td><td>2mo</td><td>2mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Gretchen Smith</span></td>
-              <td>GS@Djtest.com</td><td>(434) 555-6798</td><td>Skywriting</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Gretchen Smith</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td>$0.00</td><td>2mo</td><td>2mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Aaron Blankfields</span></td>
-              <td>jeremy@dripjobs.com</td><td>(352) 555-1234</td><td>Door to Door</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Aaron Blankfields</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td>$0.00</td><td>28d</td><td>28d</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Al Bundy</span></td>
-              <td>ShoeSalesman@marriedwchildren.com</td><td>(444) 555-6769</td><td>Door Knocking</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Al Bundy</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-estimate-sched">Estimate Scheduled</span></td>
-              <td><span class="stage-badge stage-estimate-sched">Estimate Scheduled</span></td>
-              <td>$0.00</td><td>1mo</td><td>1mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Amy Short</span></td>
-              <td>AmyShort@dripjobstest.com</td><td>(453) 555-1358</td><td>Facebook</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Amy Short</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-estimate-sched">Estimate Scheduled</span></td>
-              <td><span class="stage-badge stage-estimate-sched">Estimate Scheduled</span></td>
-              <td>$0.00</td><td>1mo</td><td>1mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Arya Stark</span></td>
-              <td>Needle@Winteriscoming.com</td><td>(333) 555-8888</td><td>Came to me in a Dream</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Area Dupes &amp; PDF M...</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-draft">In Draft</span></td>
-              <td><span class="stage-badge stage-draft">In Draft</span></td>
-              <td>$1,571.08</td><td>2mo</td><td>2mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Al Bundy</span></td>
-              <td>ShoeSalesman@marriedwchildren.com</td><td>(444) 555-6769</td><td>Door Knocking</td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> New Package</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-draft">In Draft</span></td>
-              <td><span class="stage-badge stage-draft">In Draft</span></td>
-              <td>$0.00</td><td>2mo</td><td>2mo</td><td>Jeremy Harrison</td>
-            </tr>
-
-            <!-- ★ ARCHIVED ROWS — hidden by default, shown when toggle is ON -->
-            <tr class="archived-row" style="display:none;" data-archived="true" data-record-type="deal" data-record-name="Old Exterior Repaint" data-customer="Bob Thornton">
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Bob Thornton</span></td>
-              <td>bob.thornton@example.com</td><td>(612) 555-9034</td><td>Google</td>
-              <td><span class="deal-link" onclick="openDealCC('Old Exterior Repaint', 'Bob Thornton', true)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Old Exterior Repaint</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-cancelled">Cancelled</span></td>
-              <td><span class="stage-badge stage-draft">In Draft</span></td>
-              <td>$2,400.00</td><td>4mo</td><td>4mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr class="archived-row" style="display:none;" data-archived="true" data-record-type="deal" data-record-name="Deck Stain Proposal" data-customer="Sandra Kim">
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Sandra Kim</span></td>
-              <td>sandra.kim@example.com</td><td>(503) 555-7712</td><td>Referral</td>
-              <td><span class="deal-link" onclick="openDealCC('Deck Stain Proposal', 'Sandra Kim', true)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Deck Stain Proposal</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-cancelled">Cancelled</span></td>
-              <td><span class="stage-badge stage-estimate-req">Estimate Requested</span></td>
-              <td>$875.00</td><td>5mo</td><td>5mo</td><td>Jeremy Harrison</td>
-            </tr>
-            <tr class="archived-row" style="display:none;" data-archived="true" data-record-type="deal" data-record-name="Interior Full House" data-customer="Tom Garza">
-              <td class="cb-cell"><input type="checkbox"/></td><td></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Tom Garza</span></td>
-              <td>tom.garza@example.com</td><td>(714) 555-2200</td><td>Facebook</td>
-              <td><span class="deal-link" onclick="openDealCC('Interior Full House', 'Tom Garza', true)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Interior Full House</span></td>
-              <td class="status-cell" style="display:none;"><span class="stage-badge stage-cancelled">Cancelled</span></td>
-              <td><span class="stage-badge stage-cold">Cold Leads</span></td>
-              <td>$4,100.00</td><td>6mo</td><td>6mo</td><td>Jeremy Harrison</td>
-            </tr>
+          <tbody id="sales-tbody">
+            <!-- rows injected by JS -->
           </tbody>
         </table>
       </div>
-
       <div class="table-footer">
-        <span id="sales-showing">Showing 1 to 9 of 39 entries</span>
+        <span id="sales-showing"></span>
         <div class="pagination-btns">
           <button class="page-btn" disabled>Previous</button>
           <button class="page-btn active">1</button>
@@ -1241,23 +380,13 @@
         </div>
       </div>
     </div>
-
-    <div class="annotation mt-3">
-      <strong>BR-2 — Status Column:</strong> The Status column is hidden by default. It appears automatically when "Show Archived" is toggled on. Active Deals display their current pipeline stage. Archived Deals show <span style="background:#fee2e2;color:#b91c1c;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;">Cancelled</span>. The column is sortable (click the header).<br/><br/>
-      <strong>BR-7 — Per-Record Actions:</strong> Click any archived Deal Name (red-highlighted rows) to open its full Command Center with Unarchive and Reassign Stage options.
-    </div>
   </div><!-- /view-sales -->
 
 
-  <!-- ═══════════════════════════════════════════════
-       JOBS LIST VIEW
-  ═══════════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       JOBS LIST
+  ══════════════════════════════════════ -->
   <div class="view-panel" id="view-jobs">
-
-    <div class="annotation">
-      <strong>Prototype Note — BR-4/5:</strong> "Show Archived" toggle is visible to Admin users and Super Admins only. Toggle state resets on page load (off by default).
-    </div>
-
     <div class="d-flex align-items-start justify-content-between mb-2 flex-wrap" style="gap:10px;">
       <div class="page-header mb-0">
         <h1>Jobs List</h1>
@@ -1265,76 +394,35 @@
       </div>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
-      <div class="filter-group">
-        <span class="filter-label">Filter Preset</span>
-        <select class="filter-select"><option>Default</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Salesperson</span>
-        <select class="filter-select"><option>All Salespeople</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Project Manager</span>
-        <select class="filter-select" style="min-width:130px;"><option>All Project Managers</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Crews</span>
-        <select class="filter-select"><option>All Crews</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Labels</span>
-        <select class="filter-select"><option>All Labels Selected</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Deal Stage</span>
-        <select class="filter-select"><option>All Deal Stages</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Lead Source</span>
-        <select class="filter-select"><option>All Lead Sources</option></select>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">Changed Date</span>
-        <select class="filter-select"><option>Anytime</option></select>
-      </div>
-      <div class="go-reset">
-        <button class="btn-go">Go</button>
-        <button class="btn-reset">Reset</button>
-      </div>
-
-      <!-- ★ NEW: Show Archived Toggle -->
+      <div class="filter-group"><span class="filter-label">Filter Preset</span><select class="filter-select"><option>Default</option></select></div>
+      <div class="filter-group"><span class="filter-label">Salesperson</span><select class="filter-select"><option>All Salespeople</option></select></div>
+      <div class="filter-group"><span class="filter-label">Project Manager</span><select class="filter-select" style="min-width:130px;"><option>All Project Managers</option></select></div>
+      <div class="filter-group"><span class="filter-label">Crews</span><select class="filter-select"><option>All Crews</option></select></div>
+      <div class="filter-group"><span class="filter-label">Labels</span><select class="filter-select"><option>All Labels Selected</option></select></div>
+      <div class="filter-group"><span class="filter-label">Deal Stage</span><select class="filter-select"><option>All Deal Stages</option></select></div>
+      <div class="filter-group"><span class="filter-label">Lead Source</span><select class="filter-select"><option>All Lead Sources</option></select></div>
+      <div class="filter-group"><span class="filter-label">Changed Date</span><select class="filter-select"><option>Anytime</option></select></div>
+      <div class="go-reset"><button class="btn-go">Go</button><button class="btn-reset">Reset</button></div>
       <div class="show-archived-group">
         <span class="show-archived-label">Archived</span>
         <div class="toggle-row">
-          <label class="toggle-switch">
-            <input type="checkbox" id="jobs-archived-toggle" onchange="toggleJobsArchived(this)" />
-            <span class="toggle-slider"></span>
-          </label>
+          <label class="toggle-switch"><input type="checkbox" id="jobs-archived-toggle" onchange="toggleArchived('jobs',this)" /><span class="toggle-slider"></span></label>
           <span class="toggle-text">Show Archived</span>
         </div>
       </div>
     </div>
 
-    <!-- ★ Helper text -->
     <div class="archived-helper" id="jobs-helper">
       <i class="fas fa-info-circle"></i>
-      <span>Archived Jobs are included in the list below. They appear with a <strong>Status of "Cancelled"</strong>.</span>
+      <span>Archived Jobs are included below. They appear with a <strong>Status of "Cancelled."</strong></span>
     </div>
 
-    <!-- Table -->
     <div class="list-table-wrap">
       <div class="list-table-toolbar">
-        <div class="search-wrap">
-          <label>Search:</label>
-          <input type="text" placeholder="" />
-        </div>
-        <div class="show-entries">
-          Show <select><option>15</option><option>25</option><option>50</option></select> entries
-        </div>
+        <label>Search:</label><input type="text" placeholder="" />
+        <div class="show-entries">Show <select><option>15</option><option>25</option><option>50</option></select> entries</div>
       </div>
-
       <div class="table-scroll">
         <table class="dj-table" id="jobs-table">
           <thead>
@@ -1349,8 +437,6 @@
               <th>Salesperson <i class="fas fa-sort sort-icon"></i></th>
               <th>Project Manager <i class="fas fa-sort sort-icon"></i></th>
               <th>Crew <i class="fas fa-sort sort-icon"></i></th>
-              <th>Proposal ID <i class="fas fa-sort sort-icon"></i></th>
-              <th>Invoice ID <i class="fas fa-sort sort-icon"></i></th>
               <th>Invoice Status <i class="fas fa-sort sort-icon"></i></th>
               <th>Amount <i class="fas fa-sort sort-icon"></i></th>
               <th>Paid <i class="fas fa-sort sort-icon"></i></th>
@@ -1358,200 +444,80 @@
               <th>Deal Stage <i class="fas fa-sort sort-icon"></i></th>
             </tr>
           </thead>
-          <tbody>
-            <!-- Active jobs -->
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="status-accepted">Accepted</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Multiple Props</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Adam Smith</span></td>
-              <td>AdamSmith@djtest.com</td><td>(456) 555-7907</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1359276</td><td>#212928</td><td>Paid</td><td>$5,500.00</td><td>$5,500.00</td><td>$0.00</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="status-accepted">Accepted</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> TEST Activity View...</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Jesus Rubio</span></td>
-              <td>jesus.rubio@dripjobs.com</td><td>(788) 688-9296</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1437271</td><td>#279936</td><td>Open</td><td>$5,499.66</td><td>$0.00</td><td>$5,499.66</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="status-completed">Completed</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link" onclick="openJobCC('Jesus Acorn', 'Jesus Rubio', false)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Jesus Acorn</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Jesus Rubio</span></td>
-              <td>jesus.rubio@dripjobs.com</td><td>(444) 444-4444</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1462635</td><td>#228692</td><td>Paid</td><td>$150.00</td><td>$150.00</td><td>$0.00</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="status-accepted">Accepted</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> ACORN</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Aaron Blankfields</span></td>
-              <td>jeremy@dripjobs.com</td><td>(352) 555-1234</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1509761</td><td>#250346</td><td>Open</td><td>$6,131.45</td><td>$0.00</td><td>$6,131.45</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-            <tr>
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="status-accepted">Accepted</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Aaron Blankfields...</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Aaron Blankfields</span></td>
-              <td>AaronB@dripjobstest.com</td><td>(727) 555-0000</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1521618</td><td>#281777</td><td>Open</td><td>$11,357.49</td><td>$0.00</td><td>$11,357.49</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-
-            <!-- ★ ARCHIVED JOB ROWS -->
-            <tr class="archived-row" style="display:none;" data-archived="true" data-record-type="job" data-record-name="Fence Repaint – North Side" data-customer="Maria Lopez">
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="stage-badge stage-cancelled">Cancelled</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link" onclick="openJobCC('Fence Repaint – North Side', 'Maria Lopez', true)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Fence Repaint – North Side</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Maria Lopez</span></td>
-              <td>maria.lopez@example.com</td><td>(612) 555-0011</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1388420</td><td>#241100</td><td>Open</td><td>$1,800.00</td><td>$0.00</td><td>$1,800.00</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
-            <tr class="archived-row" style="display:none;" data-archived="true" data-record-type="job" data-record-name="Garage &amp; Trim Package" data-customer="Kevin Walsh">
-              <td class="cb-cell"><input type="checkbox"/></td>
-              <td><span class="stage-badge stage-cancelled">Cancelled</span></td>
-              <td><span class="add-label-btn">+ add label</span></td>
-              <td><span class="deal-link" onclick="openJobCC('Garage &amp; Trim Package', 'Kevin Walsh', true)"><span class="deal-icon"><i class="fas fa-sync-alt"></i></span> Garage &amp; Trim Package</span></td>
-              <td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> Kevin Walsh</span></td>
-              <td>kwalsh@example.com</td><td>(503) 555-4422</td>
-              <td>Jeremy Harrison</td><td>No project manager</td><td>No crew</td>
-              <td>1401882</td><td>#243510</td><td>Open</td><td>$3,250.00</td><td>$0.00</td><td>$3,250.00</td>
-              <td><span class="stage-badge stage-proj-accepted">Project Accepted</span></td>
-            </tr>
+          <tbody id="jobs-tbody">
+            <!-- rows injected by JS -->
           </tbody>
         </table>
       </div>
-
       <div class="table-footer">
-        <span id="jobs-showing">Showing 1 to 5 of 127 entries</span>
+        <span id="jobs-showing"></span>
         <div class="pagination-btns">
           <button class="page-btn" disabled>Previous</button>
           <button class="page-btn active">1</button>
           <button class="page-btn">2</button>
           <button class="page-btn">3</button>
-          <button class="page-btn">4</button>
-          <button class="page-btn">5</button>
-          <button class="page-btn">9</button>
           <button class="page-btn">Next</button>
         </div>
       </div>
-    </div>
-
-    <div class="annotation mt-3">
-      <strong>BR-4 — Jobs List Toggle:</strong> Same interaction pattern as Sales List. Toggle on = archived Jobs appear in-line with "Cancelled" status badge.<br/><br/>
-      <strong>BR-7:</strong> Click an archived Job row's Job name to open its Job Card with Unarchive action available.
     </div>
   </div><!-- /view-jobs -->
 
 </div><!-- /main-content -->
 
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════════════
      DEAL COMMAND CENTER MODAL
-════════════════════════════════════════ -->
+══════════════════════════════════════ -->
 <div class="modal-overlay" id="deal-cc-modal">
   <div class="cc-modal">
     <span class="cc-modal-close" onclick="closeModal('deal-cc-modal')">&times;</span>
     <div class="cc-body">
-
-      <!-- Left panel -->
       <div class="cc-left">
         <div class="cc-top-actions">
           <span class="cc-add-label">+ add label</span>
           <button class="cc-edit-btn"><i class="fas fa-pencil-alt"></i></button>
-          <div class="cc-kebab" id="deal-kebab-btn" onclick="toggleKebab('deal-kebab')">
+          <div class="cc-kebab" onclick="toggleKebab('deal-kebab')">
             <i class="fas fa-ellipsis-h"></i>
             <div class="kebab-menu" id="deal-kebab">
               <div class="kebab-item"><i class="fas fa-user"></i> View Contact</div>
-              <div class="kebab-item" id="deal-archive-action" onclick="handleArchiveAction('deal')">
-                <i class="fas fa-archive"></i> <span id="deal-archive-label">Archive</span>
+              <div class="kebab-item" id="deal-kebab-archive" onclick="handleArchiveKebab('deal')">
+                <i class="fas fa-archive"></i> <span id="deal-kebab-label">Archive</span>
               </div>
               <div class="kebab-item danger"><i class="fas fa-trash-alt"></i> Delete</div>
             </div>
           </div>
         </div>
-
-        <!-- Archived banner (shown only for archived records) -->
         <div class="archived-banner" id="deal-archived-banner" style="display:none;">
           <i class="fas fa-archive"></i>
-          <div><strong>Archived Deal</strong><br/>This deal has been archived and shows as "Cancelled" in the Sales List.</div>
+          <div><strong>Archived Deal</strong><br/>This deal is archived and shows as "Cancelled" in the Sales List.</div>
         </div>
-
-        <div class="cc-name" id="deal-cc-name">Deal Name</div>
-        <div class="cc-meta" id="deal-cc-sub">Deal #1234567 &nbsp;·&nbsp; Created 2mo ago</div>
-
+        <div class="cc-name" id="deal-cc-name"></div>
+        <div class="cc-meta" id="deal-cc-meta"></div>
         <div class="cc-action-btns">
           <button class="btn-cc-action primary">New Proposal</button>
           <button class="btn-cc-action">New Appt <i class="fas fa-chevron-down" style="font-size:9px;"></i></button>
         </div>
-        <button class="btn-cc-action" style="width:100%;margin-bottom:6px;">Schedule Job</button>
-
+        <button class="btn-cc-action" style="width:100%;margin-bottom:8px;">Schedule Job</button>
         <div class="cc-section-title">Contact Information</div>
-        <div class="cc-info-row"><i class="fas fa-sync-alt"></i><span class="cc-info-link" id="deal-contact-name">Contact</span></div>
+        <div class="cc-info-row"><i class="fas fa-sync-alt"></i><span class="cc-info-link" id="deal-contact"></span></div>
         <div class="cc-info-row"><i class="fas fa-share-alt"></i><span class="cc-info-val">Word of Mouth</span></div>
         <div class="cc-info-row"><i class="fas fa-envelope"></i><span class="cc-info-val">contact@example.com</span></div>
-        <div class="cc-info-row"><i class="fas fa-phone"></i><span class="cc-info-val">(555) 555-5555</span></div>
+        <div class="cc-info-row"><i class="fas fa-phone"></i><span class="cc-info-val">(444) 444-4444</span></div>
         <div class="cc-info-row"><i class="fas fa-map-marker-alt"></i><span class="cc-info-val">1 Address<br/>Minneapolis, MN 55407</span></div>
-
-        <button class="btn-cc-action" style="width:100%;margin-bottom:6px;background:var(--dj-purple);color:#fff;border-color:var(--dj-purple);">Send Email</button>
+        <button class="btn-cc-action primary" style="width:100%;margin-bottom:6px;">Send Email</button>
         <button class="btn-cc-action" style="width:100%;margin-bottom:12px;">Request Review</button>
-
         <div class="d-flex" style="gap:12px;">
-          <div>
-            <div class="cc-section-title">Salesperson</div>
-            <div style="font-size:12px;display:flex;align-items:center;gap:4px;"><span style="width:20px;height:20px;background:var(--dj-purple);border-radius:50%;color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">JH</span> Jeremy Harrison...</div>
-          </div>
-          <div>
-            <div class="cc-section-title">Project Manager</div>
-            <div style="font-size:12px;color:#6b7280;">NA &nbsp; No PM</div>
-          </div>
+          <div><div class="cc-section-title">Salesperson</div><div style="font-size:12px;display:flex;align-items:center;gap:4px;"><span style="width:20px;height:20px;background:var(--dj-purple);border-radius:50%;color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">JH</span> Jeremy Harrison...</div></div>
+          <div><div class="cc-section-title">Project Manager</div><div style="font-size:12px;color:#6b7280;">NA &nbsp; No PM</div></div>
         </div>
       </div>
-
-      <!-- Right panel -->
       <div class="cc-right">
         <div class="cc-header-strip">
-          <div class="cc-header-stage">
-            <span class="lbl">Current Stage</span>
-            <span class="val" id="deal-cc-stage">In Draft</span>
-            <button class="btn-stage-change ml-2" id="deal-move-btn" onclick="openStageModal('deal')">Move</button>
-          </div>
-          <div class="cc-header-seq">
-            <span class="lbl">Current Sequence</span>
-            <span class="val">Proposal Accepted Sequence</span>
-            <button class="btn-stage-change ml-2">Change</button>
-          </div>
-          <div class="cc-updated">Updated 1y ago</div>
-          <div class="cc-disable-drips ml-2">
-            <label class="toggle-switch" style="width:34px;height:18px;">
-              <input type="checkbox" checked />
-              <span class="toggle-slider"></span>
-            </label>
-            <span style="font-size:11.5px;color:#374151;">Disable drips</span>
-          </div>
+          <div class="cc-header-stage"><span class="lbl">Current Stage</span><span class="val" id="deal-cc-stage"></span><button class="btn-stage-change ml-2" onclick="openStageModal('deal')">Move</button></div>
+          <div class="cc-header-seq"><span class="lbl">Current Sequence</span><span class="val">Proposal Accepted Sequence</span><button class="btn-stage-change ml-2">Change</button></div>
+          <div class="cc-updated">Updated 2mo ago</div>
+          <div class="cc-disable-drips ml-2"><label class="toggle-switch" style="width:34px;height:18px;"><input type="checkbox" checked/><span class="toggle-slider"></span></label><span style="font-size:11.5px;">Disable drips</span></div>
         </div>
-
         <div class="cc-tabs">
           <div class="cc-tab active">Chat</div>
           <div class="cc-tab">Jobi AI <span class="cc-tab-dot"></span></div>
@@ -1561,17 +527,10 @@
           <div class="cc-tab">Attachments</div>
           <div class="cc-tab">Tasks</div>
         </div>
-
         <div class="cc-tab-content">
           <div class="chat-date-divider">10/06/2025</div>
-          <div class="chat-bubble-wrap">
-            <div class="chat-bubble">
-              In Draft immediate SMS Reply STOP to unsubscribe.
-              <div class="meta"><i class="fas fa-check" style="font-size:9px;"></i> 10/06/2025</div>
-            </div>
-          </div>
+          <div class="chat-bubble-wrap"><div class="chat-bubble">In Draft immediate SMS Reply STOP to unsubscribe.<div class="meta"><i class="fas fa-check" style="font-size:9px;"></i> 10/06/2025</div></div></div>
         </div>
-
         <div class="chat-input-bar">
           <div class="add-btn"><i class="fas fa-plus"></i></div>
           <input type="text" placeholder="Type your message" />
@@ -1586,89 +545,55 @@
 </div>
 
 
-<!-- ════════════════════════════════════════
+<!-- ══════════════════════════════════════
      JOB CARD MODAL
-════════════════════════════════════════ -->
+══════════════════════════════════════ -->
 <div class="modal-overlay" id="job-cc-modal">
   <div class="cc-modal">
     <span class="cc-modal-close" onclick="closeModal('job-cc-modal')">&times;</span>
     <div class="cc-body">
-
-      <!-- Left panel -->
       <div class="cc-left">
         <div class="cc-top-actions">
           <span class="cc-add-label">+ add label</span>
           <button class="cc-edit-btn"><i class="fas fa-pencil-alt"></i></button>
-          <div class="cc-kebab" id="job-kebab-btn" onclick="toggleKebab('job-kebab')">
+          <div class="cc-kebab" onclick="toggleKebab('job-kebab')">
             <i class="fas fa-ellipsis-h"></i>
             <div class="kebab-menu" id="job-kebab">
               <div class="kebab-item"><i class="fas fa-user"></i> View Contact</div>
-              <div class="kebab-item" id="job-archive-action" onclick="handleArchiveAction('job')">
-                <i class="fas fa-archive"></i> <span id="job-archive-label">Archive</span>
+              <div class="kebab-item" id="job-kebab-archive" onclick="handleArchiveKebab('job')">
+                <i class="fas fa-archive"></i> <span id="job-kebab-label">Archive</span>
               </div>
               <div class="kebab-item danger"><i class="fas fa-trash-alt"></i> Delete</div>
             </div>
           </div>
         </div>
-
-        <!-- Archived banner -->
         <div class="archived-banner" id="job-archived-banner" style="display:none;">
           <i class="fas fa-archive"></i>
-          <div><strong>Archived Job</strong><br/>This job has been archived and shows as "Cancelled" in the Jobs List.</div>
+          <div><strong>Archived Job</strong><br/>This job is archived and shows as "Cancelled" in the Jobs List.</div>
         </div>
-
-        <div class="cc-name" id="job-cc-name">Job Name</div>
-        <div class="cc-meta" id="job-cc-sub">Job #1234567 &nbsp;·&nbsp; Created 2mo ago</div>
-
-        <div class="cc-info-row mt-2"><i class="fas fa-sync-alt"></i><span class="cc-info-link" id="job-contact-name">Contact</span></div>
+        <div class="cc-name" id="job-cc-name"></div>
+        <div class="cc-meta" id="job-cc-meta"></div>
+        <div class="cc-info-row mt-2"><i class="fas fa-sync-alt"></i><span class="cc-info-link" id="job-contact"></span></div>
         <div class="cc-info-row"><i class="fas fa-share-alt"></i><span class="cc-info-val">Word of Mouth</span></div>
         <div class="cc-info-row"><i class="fas fa-envelope"></i><span class="cc-info-val">contact@example.com</span></div>
         <div class="cc-info-row"><i class="fas fa-phone"></i><span class="cc-info-val">(444) 444-4444</span></div>
         <div class="cc-info-row"><i class="fas fa-map-marker-alt"></i><span class="cc-info-val">1 Address<br/>Minneapolis, MN 55407</span></div>
-
-        <button class="btn-cc-action" style="width:100%;margin-bottom:6px;background:var(--dj-purple);color:#fff;border-color:var(--dj-purple);">Send Email</button>
+        <button class="btn-cc-action primary" style="width:100%;margin-bottom:6px;">Send Email</button>
         <button class="btn-cc-action" style="width:100%;margin-bottom:12px;">Request Review</button>
-
         <div class="cc-section-title">Job Info</div>
-        <div style="font-size:12px;color:#374151;line-height:1.7;">
-          Crew Name: <span style="color:#6b7280;">—</span><br/>
-          Job Start Date: <strong>Not assigned</strong><br/>
-          Job End Date: <strong>Not assigned</strong>
-        </div>
+        <div style="font-size:12px;color:#374151;line-height:1.7;">Crew Name: <span style="color:#6b7280;">—</span><br/>Job Start Date: <strong>Not assigned</strong><br/>Job End Date: <strong>Not assigned</strong></div>
         <button class="btn-cc-action" style="width:100%;margin:8px 0;">View Work Order</button>
-
         <div class="cc-section-title">Financials</div>
-        <div style="font-size:12px;line-height:1.7;color:#374151;">
-          Invoice Total: <strong>$150.00</strong><br/>
-          Total Payments: <strong>$150.00</strong><br/>
-          Amount Due: <strong>$0.00</strong>
-        </div>
+        <div style="font-size:12px;line-height:1.7;">Invoice Total: <strong>$150.00</strong><br/>Total Payments: <strong>$150.00</strong><br/>Amount Due: <strong>$0.00</strong></div>
         <button class="btn-cc-action" style="width:100%;margin-top:6px;">View Invoice</button>
       </div>
-
-      <!-- Right panel -->
       <div class="cc-right">
         <div class="cc-header-strip">
-          <div class="cc-header-stage">
-            <span class="lbl">Current Stage</span>
-            <span class="val" id="job-cc-stage">Project Accepted</span>
-            <button class="btn-stage-change ml-2" id="job-move-btn" onclick="openStageModal('job')">Move</button>
-          </div>
-          <div class="cc-header-seq">
-            <span class="lbl">Current Sequence</span>
-            <span class="val">Proposal Accepted Sequence</span>
-            <button class="btn-stage-change ml-2">Change</button>
-          </div>
+          <div class="cc-header-stage"><span class="lbl">Current Stage</span><span class="val" id="job-cc-stage"></span><button class="btn-stage-change ml-2" onclick="openStageModal('job')">Move</button></div>
+          <div class="cc-header-seq"><span class="lbl">Current Sequence</span><span class="val">Proposal Accepted Sequence</span><button class="btn-stage-change ml-2">Change</button></div>
           <div class="cc-updated">Updated 1y ago</div>
-          <div class="cc-disable-drips ml-2">
-            <label class="toggle-switch" style="width:34px;height:18px;">
-              <input type="checkbox" checked />
-              <span class="toggle-slider"></span>
-            </label>
-            <span style="font-size:11.5px;">Disable drips</span>
-          </div>
+          <div class="cc-disable-drips ml-2"><label class="toggle-switch" style="width:34px;height:18px;"><input type="checkbox" checked/><span class="toggle-slider"></span></label><span style="font-size:11.5px;">Disable drips</span></div>
         </div>
-
         <div class="cc-tabs">
           <div class="cc-tab active">Chat</div>
           <div class="cc-tab">Jobi AI <span class="cc-tab-dot"></span></div>
@@ -1678,17 +603,10 @@
           <div class="cc-tab">Attachments</div>
           <div class="cc-tab">Tasks</div>
         </div>
-
         <div class="cc-tab-content">
           <div class="chat-date-divider">10/06/2025</div>
-          <div class="chat-bubble-wrap">
-            <div class="chat-bubble">
-              In Draft immediate SMS Reply STOP to unsubscribe.
-              <div class="meta"><i class="fas fa-check" style="font-size:9px;"></i> 10/06/2025</div>
-            </div>
-          </div>
+          <div class="chat-bubble-wrap"><div class="chat-bubble">In Draft immediate SMS Reply STOP to unsubscribe.<div class="meta"><i class="fas fa-check" style="font-size:9px;"></i> 10/06/2025</div></div></div>
         </div>
-
         <div class="chat-input-bar">
           <div class="add-btn"><i class="fas fa-plus"></i></div>
           <input type="text" placeholder="Type your message" />
@@ -1703,19 +621,17 @@
 </div>
 
 
-<!-- ════════════════════════════════════════
-     STAGE MOVE MODAL
-════════════════════════════════════════ -->
+<!-- STAGE MOVE MODAL -->
 <div class="modal-overlay" id="stage-modal">
   <div class="stage-modal">
     <h3>Move to Stage</h3>
-    <p>Select a new pipeline stage for this record. Moving an archived record to a valid stage will restore it to active status.</p>
-    <div class="stage-option" onclick="selectStage(this, 'Cold Leads')"><i class="fas fa-snowflake"></i> Cold Leads</div>
-    <div class="stage-option" onclick="selectStage(this, 'Estimate Requested')"><i class="fas fa-clipboard-list"></i> Estimate Requested</div>
-    <div class="stage-option" onclick="selectStage(this, 'Estimate Scheduled')"><i class="fas fa-calendar-check"></i> Estimate Scheduled</div>
-    <div class="stage-option" onclick="selectStage(this, 'In Draft')"><i class="fas fa-file-alt"></i> In Draft</div>
-    <div class="stage-option" onclick="selectStage(this, 'Proposal Sent')"><i class="fas fa-paper-plane"></i> Proposal Sent</div>
-    <div class="stage-option" onclick="selectStage(this, 'Project Accepted')"><i class="fas fa-check-circle"></i> Project Accepted</div>
+    <p>Select a new pipeline stage for this record.</p>
+    <div class="stage-option" onclick="selectStage(this,'Cold Leads')"><i class="fas fa-snowflake"></i> Cold Leads</div>
+    <div class="stage-option" onclick="selectStage(this,'Estimate Requested')"><i class="fas fa-clipboard-list"></i> Estimate Requested</div>
+    <div class="stage-option" onclick="selectStage(this,'Estimate Scheduled')"><i class="fas fa-calendar-check"></i> Estimate Scheduled</div>
+    <div class="stage-option" onclick="selectStage(this,'In Draft')"><i class="fas fa-file-alt"></i> In Draft</div>
+    <div class="stage-option" onclick="selectStage(this,'Proposal Sent')"><i class="fas fa-paper-plane"></i> Proposal Sent</div>
+    <div class="stage-option" onclick="selectStage(this,'Project Accepted')"><i class="fas fa-check-circle"></i> Project Accepted</div>
     <div class="stage-modal-actions">
       <button class="btn-outline-dj" onclick="closeModal('stage-modal')">Cancel</button>
       <button class="btn-dj-primary" onclick="confirmStageMove()">Move to Stage</button>
@@ -1723,232 +639,396 @@
   </div>
 </div>
 
-
-<!-- ════════════════════════════════════════
-     UNARCHIVE CONFIRM MODAL
-════════════════════════════════════════ -->
-<div class="modal-overlay" id="unarchive-modal">
+<!-- ARCHIVE CONFIRM MODAL -->
+<div class="modal-overlay" id="archive-confirm-modal">
   <div class="confirm-modal">
-    <div class="confirm-icon"><i class="fas fa-box-open"></i></div>
-    <h3>Unarchive <span id="unarchive-type">Record</span>?</h3>
-    <p>This will restore the <span id="unarchive-name"></span> to active status. It will no longer appear as "Cancelled" in the list.</p>
+    <div class="confirm-icon archive"><i class="fas fa-archive"></i></div>
+    <h3>Archive <span id="archive-confirm-type"></span>?</h3>
+    <p id="archive-confirm-body"></p>
     <div class="confirm-modal-actions">
-      <button class="btn-outline-dj" onclick="closeModal('unarchive-modal')">Cancel</button>
-      <button class="btn-dj-primary" onclick="confirmUnarchive()" style="background:#059669;border-color:#059669;">Unarchive</button>
+      <button class="btn-outline-dj" onclick="closeModal('archive-confirm-modal')">Cancel</button>
+      <button class="btn-danger" onclick="commitArchive()">Archive</button>
     </div>
   </div>
 </div>
 
-
-<!-- TOAST -->
-<div class="toast-msg" id="toast">
-  <i class="fas fa-check-circle"></i>
-  <span id="toast-text">Done</span>
+<!-- UNARCHIVE CONFIRM MODAL -->
+<div class="modal-overlay" id="unarchive-confirm-modal">
+  <div class="confirm-modal">
+    <div class="confirm-icon unarchive"><i class="fas fa-box-open"></i></div>
+    <h3>Unarchive <span id="unarchive-confirm-type"></span>?</h3>
+    <p id="unarchive-confirm-body"></p>
+    <div class="confirm-modal-actions">
+      <button class="btn-outline-dj" onclick="closeModal('unarchive-confirm-modal')">Cancel</button>
+      <button class="btn-green" onclick="commitUnarchive()">Unarchive</button>
+    </div>
+  </div>
 </div>
 
+<!-- TOAST -->
+<div class="toast-msg" id="toast"><i class="fas fa-check-circle"></i><span id="toast-text"></span></div>
 
 <script>
-  // ── State ──
-  var currentRecordType = null;
-  var pendingStageRecordType = null;
-  var selectedStageEl = null;
-  var selectedStageName = null;
+// ═══════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════
+var salesData = [
+  { id:'s1', customer:'Laura Close',       email:'laura.cuadros+close@dripjobs.com',    phone:'(659) 235-3226', source:'Fortune Cookie',       deal:'SMS Testing',            stage:'Cold Leads',          amount:'$0.00',      lastChange:'16d', age:'16d', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s2', customer:'Jesus Google Voice',email:'jesus.rubio+googlevoice@dripjobs.com',phone:'(352) 234-3554', source:'A Little Bird',         deal:'Google Voice',           stage:'Cold Leads',          amount:'$0.00',      lastChange:'3h',  age:'3h',  salesperson:'Jeremy Harrison', archived:false },
+  { id:'s3', customer:'Michael Dorsey',    email:'MichaelD@DJTest.com',                phone:'(770) 555-1980', source:'A Little Bird',         deal:'Michael Dorsey',         stage:'Estimate Requested',  amount:'$0.00',      lastChange:'2mo', age:'2mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s4', customer:'Gretchen Smith',    email:'GS@Djtest.com',                      phone:'(434) 555-6798', source:'Skywriting',            deal:'Gretchen Smith',         stage:'Estimate Requested',  amount:'$0.00',      lastChange:'2mo', age:'2mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s5', customer:'Aaron Blankfields', email:'jeremy@dripjobs.com',                phone:'(352) 555-1234', source:'Door to Door',          deal:'Aaron Blankfields',      stage:'Estimate Requested',  amount:'$0.00',      lastChange:'28d', age:'28d', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s6', customer:'Al Bundy',          email:'ShoeSalesman@marriedwchildren.com',  phone:'(444) 555-6769', source:'Door Knocking',         deal:'Al Bundy',               stage:'Estimate Scheduled',  amount:'$0.00',      lastChange:'1mo', age:'1mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s7', customer:'Amy Short',         email:'AmyShort@dripjobstest.com',          phone:'(453) 555-1358', source:'Facebook',              deal:'Amy Short',              stage:'Estimate Scheduled',  amount:'$0.00',      lastChange:'1mo', age:'1mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s8', customer:'Arya Stark',        email:'Needle@Winteriscoming.com',          phone:'(333) 555-8888', source:'Came to me in a Dream', deal:'Area Dupes & PDF M...',  stage:'In Draft',            amount:'$1,571.08',  lastChange:'2mo', age:'2mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s9', customer:'Al Bundy',          email:'ShoeSalesman@marriedwchildren.com',  phone:'(444) 555-6769', source:'Door Knocking',         deal:'New Package',            stage:'In Draft',            amount:'$0.00',      lastChange:'2mo', age:'2mo', salesperson:'Jeremy Harrison', archived:false },
+  { id:'s10',customer:'Bob Thornton',      email:'bob.thornton@example.com',           phone:'(612) 555-9034', source:'Google',                deal:'Old Exterior Repaint',   stage:'In Draft',            amount:'$2,400.00',  lastChange:'4mo', age:'4mo', salesperson:'Jeremy Harrison', archived:true  },
+  { id:'s11',customer:'Sandra Kim',        email:'sandra.kim@example.com',             phone:'(503) 555-7712', source:'Referral',              deal:'Deck Stain Proposal',    stage:'Estimate Requested',  amount:'$875.00',    lastChange:'5mo', age:'5mo', salesperson:'Jeremy Harrison', archived:true  },
+  { id:'s12',customer:'Tom Garza',         email:'tom.garza@example.com',              phone:'(714) 555-2200', source:'Facebook',              deal:'Interior Full House',    stage:'Cold Leads',          amount:'$4,100.00',  lastChange:'6mo', age:'6mo', salesperson:'Jeremy Harrison', archived:true  }
+];
 
-  // ── Nav ──
-  function showView(id) {
-    document.querySelectorAll('.view-panel').forEach(function(p){ p.classList.remove('active'); });
-    document.querySelectorAll('.sidebar-item').forEach(function(i){ i.classList.remove('active'); });
-    var panel = document.getElementById('view-' + id);
-    var navEl = document.getElementById('nav-' + id);
-    if (panel) panel.classList.add('active');
-    if (navEl) navEl.classList.add('active');
-  }
+var jobsData = [
+  { id:'j1', status:'Accepted',  job:'Multiple Props',            customer:'Adam Smith',      email:'AdamSmith@djtest.com',         phone:'(456) 555-7907', salesperson:'Jeremy Harrison', invoiceStatus:'Paid',          amount:'$5,500.00', paid:'$5,500.00', balance:'$0.00',    stage:'Project Accepted', archived:false },
+  { id:'j2', status:'Accepted',  job:'TEST Activity View...',     customer:'Jesus Rubio',     email:'jesus.rubio@dripjobs.com',     phone:'(788) 688-9296', salesperson:'Jeremy Harrison', invoiceStatus:'Open',          amount:'$5,499.66', paid:'$0.00',     balance:'$5,499.66',stage:'Project Accepted', archived:false },
+  { id:'j3', status:'Completed', job:'Jesus Acorn',               customer:'Jesus Rubio',     email:'jesus.rubio@dripjobs.com',     phone:'(444) 444-4444', salesperson:'Jeremy Harrison', invoiceStatus:'Paid',          amount:'$150.00',   paid:'$150.00',   balance:'$0.00',    stage:'Project Accepted', archived:false },
+  { id:'j4', status:'Accepted',  job:'ACORN',                     customer:'Aaron Blankfields',email:'jeremy@dripjobs.com',        phone:'(352) 555-1234', salesperson:'Jeremy Harrison', invoiceStatus:'Open',          amount:'$6,131.45', paid:'$0.00',     balance:'$6,131.45',stage:'Project Accepted', archived:false },
+  { id:'j5', status:'Accepted',  job:'Aaron Blankfields...',      customer:'Aaron Blankfields',email:'AaronB@dripjobstest.com',    phone:'(727) 555-0000', salesperson:'Jeremy Harrison', invoiceStatus:'Open',          amount:'$11,357.49',paid:'$0.00',     balance:'$11,357.49',stage:'Project Accepted',archived:false },
+  { id:'j6', status:'Accepted',  job:'Fence Repaint – North Side',customer:'Maria Lopez',     email:'maria.lopez@example.com',     phone:'(612) 555-0011', salesperson:'Jeremy Harrison', invoiceStatus:'Open',          amount:'$1,800.00', paid:'$0.00',     balance:'$1,800.00',stage:'Project Accepted', archived:true  },
+  { id:'j7', status:'Accepted',  job:'Garage & Trim Package',     customer:'Kevin Walsh',     email:'kwalsh@example.com',          phone:'(503) 555-4422', salesperson:'Jeremy Harrison', invoiceStatus:'Open',          amount:'$3,250.00', paid:'$0.00',     balance:'$3,250.00',stage:'Project Accepted', archived:true  }
+];
 
-  // init nav highlight
-  document.getElementById('nav-sales').classList.add('active');
+// ═══════════════════════════════════════
+// TOGGLE STATE
+// ═══════════════════════════════════════
+var showArchivedSales = false;
+var showArchivedJobs  = false;
 
-  // ── Sales Archived Toggle ──
-  function toggleSalesArchived(cb) {
-    var rows = document.querySelectorAll('#sales-table .archived-row');
-    var helper = document.getElementById('sales-helper');
-    var statusCol = document.getElementById('sales-status-col');
-    var statusCells = document.querySelectorAll('#sales-table .status-cell');
-    var countEl = document.getElementById('sales-count');
-    var showingEl = document.getElementById('sales-showing');
+// currently open record id & list
+var openRecordList = null;
+var openRecordId   = null;
 
-    if (cb.checked) {
-      rows.forEach(function(r){ r.style.display = ''; });
-      helper.classList.add('visible');
-      statusCol.style.display = '';
-      statusCells.forEach(function(c){ c.style.display = ''; });
-      countEl.textContent = '42';
-      showingEl.textContent = 'Showing 1 to 12 of 42 entries (including 3 archived)';
-    } else {
-      rows.forEach(function(r){ r.style.display = 'none'; });
-      helper.classList.remove('visible');
-      statusCol.style.display = 'none';
-      statusCells.forEach(function(c){ c.style.display = 'none'; });
-      countEl.textContent = '39';
-      showingEl.textContent = 'Showing 1 to 9 of 39 entries';
-    }
-  }
+// stage move
+var pendingStageList = null;
+var selectedStageName = null;
 
-  // ── Jobs Archived Toggle ──
-  function toggleJobsArchived(cb) {
-    var rows = document.querySelectorAll('#jobs-table .archived-row');
-    var helper = document.getElementById('jobs-helper');
-    var countEl = document.getElementById('jobs-count');
-    var showingEl = document.getElementById('jobs-showing');
+// ═══════════════════════════════════════
+// STATUS HELPERS
+// ═══════════════════════════════════════
+function dealStatusBadge(record) {
+  if (record.archived) return '<span class="stage-badge badge-cancelled">Cancelled</span>';
+  var s = record.stage;
+  if (s === 'Cold Leads' || s === 'Estimate Requested')
+    return '<span class="stage-badge badge-open">Open</span>';
+  if (s === 'Estimate Scheduled')
+    return '<span class="stage-badge badge-scheduled">Scheduled</span>';
+  if (s === 'In Draft')
+    return '<span class="stage-badge badge-pending">Pending</span>';
+  return '<span class="stage-badge badge-open">Open</span>';
+}
 
-    if (cb.checked) {
-      rows.forEach(function(r){ r.style.display = ''; });
-      helper.classList.add('visible');
-      countEl.textContent = '129';
-      showingEl.textContent = 'Showing 1 to 7 of 129 entries (including 2 archived)';
-    } else {
-      rows.forEach(function(r){ r.style.display = 'none'; });
-      helper.classList.remove('visible');
-      countEl.textContent = '127';
-      showingEl.textContent = 'Showing 1 to 5 of 127 entries';
-    }
-  }
+function dealStageBadge(stage) {
+  var map = {
+    'Cold Leads':         'stage-cold',
+    'Estimate Requested': 'stage-est-req',
+    'Estimate Scheduled': 'stage-est-sched',
+    'In Draft':           'stage-draft',
+    'Project Accepted':   'stage-accepted',
+    'Proposal Sent':      'stage-accepted'
+  };
+  return '<span class="stage-badge ' + (map[stage]||'stage-draft') + '">' + stage + '</span>';
+}
 
-  // ── Open Deal Command Center ──
-  function openDealCC(dealName, customer, isArchived) {
-    currentRecordType = 'deal';
-    document.getElementById('deal-cc-name').textContent = dealName;
-    document.getElementById('deal-cc-sub').textContent = 'Deal #' + Math.floor(Math.random()*900000+1000000) + ' · Created 4mo ago';
-    document.getElementById('deal-contact-name').textContent = customer;
-    document.getElementById('deal-cc-stage').textContent = isArchived ? 'In Draft (Archived)' : 'In Draft';
+function jobStatusBadge(record) {
+  if (record.archived) return '<span class="stage-badge badge-cancelled">Cancelled</span>';
+  var cls = record.status === 'Completed' ? 'badge-completed' : 'badge-accepted';
+  return '<span class="stage-badge ' + cls + '">' + record.status + '</span>';
+}
 
-    var banner = document.getElementById('deal-archived-banner');
-    var archiveLabel = document.getElementById('deal-archive-label');
-    var archiveAction = document.getElementById('deal-archive-action');
+// ═══════════════════════════════════════
+// RENDER SALES TABLE
+// ═══════════════════════════════════════
+function renderSales() {
+  var tbody = document.getElementById('sales-tbody');
+  var statusTh = document.getElementById('sales-status-th');
+  var helper   = document.getElementById('sales-helper');
+  var rows = '';
+  var visible = 0;
 
-    if (isArchived) {
-      banner.style.display = 'flex';
-      archiveLabel.textContent = 'Unarchive';
-      archiveAction.className = 'kebab-item success';
-    } else {
-      banner.style.display = 'none';
-      archiveLabel.textContent = 'Archive';
-      archiveAction.className = 'kebab-item';
-    }
-
-    openModal('deal-cc-modal');
-  }
-
-  // ── Open Job Card ──
-  function openJobCC(jobName, customer, isArchived) {
-    currentRecordType = 'job';
-    document.getElementById('job-cc-name').textContent = jobName;
-    document.getElementById('job-cc-sub').textContent = 'Job #' + Math.floor(Math.random()*900000+1000000) + ' · Created 4mo ago';
-    document.getElementById('job-contact-name').textContent = customer;
-    document.getElementById('job-cc-stage').textContent = isArchived ? 'Project Accepted (Archived)' : 'Project Accepted';
-
-    var banner = document.getElementById('job-archived-banner');
-    var archiveLabel = document.getElementById('job-archive-label');
-    var archiveAction = document.getElementById('job-archive-action');
-
-    if (isArchived) {
-      banner.style.display = 'flex';
-      archiveLabel.textContent = 'Unarchive';
-      archiveAction.className = 'kebab-item success';
-    } else {
-      banner.style.display = 'none';
-      archiveLabel.textContent = 'Archive';
-      archiveAction.className = 'kebab-item';
-    }
-
-    openModal('job-cc-modal');
-  }
-
-  // ── Kebab Menu ──
-  function toggleKebab(id) {
-    var menu = document.getElementById(id);
-    var isOpen = menu.classList.contains('open');
-    document.querySelectorAll('.kebab-menu').forEach(function(m){ m.classList.remove('open'); });
-    if (!isOpen) menu.classList.add('open');
-  }
-
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.cc-kebab')) {
-      document.querySelectorAll('.kebab-menu').forEach(function(m){ m.classList.remove('open'); });
-    }
+  salesData.forEach(function(r) {
+    if (r.archived && !showArchivedSales) return;
+    visible++;
+    var rowClass = r.archived ? ' class="archived-row"' : '';
+    var statusCell = showArchivedSales
+      ? '<td>' + dealStatusBadge(r) + '</td>'
+      : '';
+    rows += '<tr' + rowClass + '>'
+      + '<td class="cb-cell"><input type="checkbox"/></td>'
+      + '<td></td>'
+      + '<td><span class="add-label-btn">+ add label</span></td>'
+      + '<td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> ' + r.customer + '</span></td>'
+      + '<td>' + r.email + '</td>'
+      + '<td>' + r.phone + '</td>'
+      + '<td>' + r.source + '</td>'
+      + '<td><span class="deal-link" onclick="openDealCC(\'' + r.id + '\')">'
+      +   '<span class="deal-icon"><i class="fas fa-sync-alt"></i></span> ' + r.deal
+      + '</span></td>'
+      + statusCell
+      + '<td>' + dealStageBadge(r.stage) + '</td>'
+      + '<td>' + r.amount + '</td>'
+      + '<td>' + r.lastChange + '</td>'
+      + '<td>' + r.age + '</td>'
+      + '<td>' + r.salesperson + '</td>'
+      + '</tr>';
   });
 
-  // ── Archive / Unarchive action ──
-  function handleArchiveAction(type) {
-    var label = document.getElementById(type + '-archive-label').textContent;
-    if (label === 'Unarchive') {
-      var name = document.getElementById(type + '-cc-name').textContent;
-      document.getElementById('unarchive-type').textContent = type === 'deal' ? 'Deal' : 'Job';
-      document.getElementById('unarchive-name').textContent = '"' + name + '"';
-      currentRecordType = type;
-      closeModal(type + '-cc-modal');
-      openModal('unarchive-modal');
-    }
-    document.querySelectorAll('.kebab-menu').forEach(function(m){ m.classList.remove('open'); });
-  }
+  tbody.innerHTML = rows;
+  statusTh.style.display = showArchivedSales ? '' : 'none';
+  if (showArchivedSales) helper.classList.add('visible');
+  else helper.classList.remove('visible');
 
-  function confirmUnarchive() {
-    closeModal('unarchive-modal');
-    showToast((currentRecordType === 'deal' ? 'Deal' : 'Job') + ' has been unarchived and restored to active status.');
-  }
+  var total = salesData.filter(function(r){ return !r.archived; }).length;
+  var archived = salesData.filter(function(r){ return r.archived; }).length;
+  document.getElementById('sales-count').textContent = showArchivedSales ? (total + archived) : total;
+  var showingText = 'Showing 1 to ' + visible + ' of ' + (showArchivedSales ? total + archived : total) + ' entries';
+  if (showArchivedSales && archived > 0) showingText += ' (including ' + archived + ' archived)';
+  document.getElementById('sales-showing').textContent = showingText;
+}
 
-  // ── Stage Move ──
-  function openStageModal(type) {
-    pendingStageRecordType = type;
-    selectedStageEl = null;
-    selectedStageName = null;
-    document.querySelectorAll('.stage-option').forEach(function(o){ o.classList.remove('selected'); });
-    openModal('stage-modal');
-  }
+// ═══════════════════════════════════════
+// RENDER JOBS TABLE
+// ═══════════════════════════════════════
+function renderJobs() {
+  var tbody  = document.getElementById('jobs-tbody');
+  var helper = document.getElementById('jobs-helper');
+  var rows = '';
+  var visible = 0;
 
-  function selectStage(el, name) {
-    document.querySelectorAll('.stage-option').forEach(function(o){ o.classList.remove('selected'); });
-    el.classList.add('selected');
-    selectedStageEl = el;
-    selectedStageName = name;
-  }
-
-  function confirmStageMove() {
-    if (!selectedStageName) { alert('Please select a stage.'); return; }
-    var stageEl = document.getElementById(pendingStageRecordType + '-cc-stage');
-    stageEl.textContent = selectedStageName;
-    closeModal('stage-modal');
-    showToast('Stage updated to "' + selectedStageName + '".');
-  }
-
-  // ── Modal helpers ──
-  function openModal(id) {
-    document.getElementById(id).classList.add('open');
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('open');
-  }
-
-  // click outside to close modals
-  document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) closeModal(overlay.id);
-    });
+  jobsData.forEach(function(r) {
+    if (r.archived && !showArchivedJobs) return;
+    visible++;
+    var rowClass = r.archived ? ' class="archived-row"' : '';
+    rows += '<tr' + rowClass + '>'
+      + '<td class="cb-cell"><input type="checkbox"/></td>'
+      + '<td>' + jobStatusBadge(r) + '</td>'
+      + '<td><span class="add-label-btn">+ add label</span></td>'
+      + '<td><span class="deal-link" onclick="openJobCC(\'' + r.id + '\')">'
+      +   '<span class="deal-icon"><i class="fas fa-sync-alt"></i></span> ' + r.job
+      + '</span></td>'
+      + '<td><span class="contact-link"><span class="contact-icon"><i class="fas fa-sync-alt"></i></span> ' + r.customer + '</span></td>'
+      + '<td>' + r.email + '</td>'
+      + '<td>' + r.phone + '</td>'
+      + '<td>' + r.salesperson + '</td>'
+      + '<td>No project manager</td>'
+      + '<td>No crew</td>'
+      + '<td>' + r.invoiceStatus + '</td>'
+      + '<td>' + r.amount + '</td>'
+      + '<td>' + r.paid + '</td>'
+      + '<td>' + r.balance + '</td>'
+      + '<td>' + dealStageBadge(r.stage) + '</td>'
+      + '</tr>';
   });
 
-  // ── Toast ──
-  function showToast(msg) {
-    var t = document.getElementById('toast');
-    document.getElementById('toast-text').textContent = msg;
-    t.classList.add('show');
-    setTimeout(function(){ t.classList.remove('show'); }, 3500);
-  }
+  tbody.innerHTML = rows;
+  if (showArchivedJobs) helper.classList.add('visible');
+  else helper.classList.remove('visible');
 
-  // ── Demo: clicking non-archived deal link opens active CC ──
-  document.querySelectorAll('.deal-link:not([onclick])').forEach(function(el) {
-    el.addEventListener('click', function() {
-      openDealCC(el.textContent.trim(), 'Customer', false);
-    });
-  });
+  var total    = jobsData.filter(function(r){ return !r.archived; }).length;
+  var archived = jobsData.filter(function(r){ return r.archived; }).length;
+  document.getElementById('jobs-count').textContent = showArchivedJobs ? (total + archived) : total;
+  var showingText = 'Showing 1 to ' + visible + ' of ' + (showArchivedJobs ? total + archived : total) + ' entries';
+  if (showArchivedJobs && archived > 0) showingText += ' (including ' + archived + ' archived)';
+  document.getElementById('jobs-showing').textContent = showingText;
+}
+
+// ═══════════════════════════════════════
+// TOGGLE
+// ═══════════════════════════════════════
+function toggleArchived(list, cb) {
+  if (list === 'sales') { showArchivedSales = cb.checked; renderSales(); }
+  else                  { showArchivedJobs  = cb.checked; renderJobs();  }
+}
+
+// ═══════════════════════════════════════
+// OPEN COMMAND CENTER — DEAL
+// ═══════════════════════════════════════
+function openDealCC(id) {
+  var r = salesData.find(function(x){ return x.id === id; });
+  openRecordList = 'sales';
+  openRecordId   = id;
+
+  document.getElementById('deal-cc-name').textContent = r.deal;
+  document.getElementById('deal-cc-meta').textContent = 'Deal #' + Math.floor(Math.random()*900000+1100000) + ' · Created ' + r.age + ' ago';
+  document.getElementById('deal-contact').textContent = r.customer;
+  document.getElementById('deal-cc-stage').textContent = r.stage;
+
+  var banner = document.getElementById('deal-archived-banner');
+  var kebabItem = document.getElementById('deal-kebab-archive');
+  var kebabLabel = document.getElementById('deal-kebab-label');
+  if (r.archived) {
+    banner.style.display = 'flex';
+    kebabLabel.textContent = 'Unarchive';
+    kebabItem.className = 'kebab-item success';
+  } else {
+    banner.style.display = 'none';
+    kebabLabel.textContent = 'Archive';
+    kebabItem.className = 'kebab-item';
+  }
+  openModal('deal-cc-modal');
+}
+
+// ═══════════════════════════════════════
+// OPEN JOB CARD
+// ═══════════════════════════════════════
+function openJobCC(id) {
+  var r = jobsData.find(function(x){ return x.id === id; });
+  openRecordList = 'jobs';
+  openRecordId   = id;
+
+  document.getElementById('job-cc-name').textContent = r.job;
+  document.getElementById('job-cc-meta').textContent = 'Job #' + Math.floor(Math.random()*900000+1100000) + ' · Created 4mo ago';
+  document.getElementById('job-contact').textContent = r.customer;
+  document.getElementById('job-cc-stage').textContent = r.stage;
+
+  var banner = document.getElementById('job-archived-banner');
+  var kebabItem = document.getElementById('job-kebab-archive');
+  var kebabLabel = document.getElementById('job-kebab-label');
+  if (r.archived) {
+    banner.style.display = 'flex';
+    kebabLabel.textContent = 'Unarchive';
+    kebabItem.className = 'kebab-item success';
+  } else {
+    banner.style.display = 'none';
+    kebabLabel.textContent = 'Archive';
+    kebabItem.className = 'kebab-item';
+  }
+  openModal('job-cc-modal');
+}
+
+// ═══════════════════════════════════════
+// ARCHIVE / UNARCHIVE via KEBAB
+// ═══════════════════════════════════════
+function handleArchiveKebab(type) {
+  closeAllKebabs();
+  var data = type === 'deal' ? salesData : jobsData;
+  var r = data.find(function(x){ return x.id === openRecordId; });
+  var label = type === 'deal' ? document.getElementById('deal-kebab-label').textContent
+                              : document.getElementById('job-kebab-label').textContent;
+  var typeLabel = type === 'deal' ? 'Deal' : 'Job';
+  var ccModal   = type === 'deal' ? 'deal-cc-modal' : 'job-cc-modal';
+
+  if (label === 'Unarchive') {
+    document.getElementById('unarchive-confirm-type').textContent = typeLabel;
+    document.getElementById('unarchive-confirm-body').textContent =
+      '"' + (type === 'deal' ? r.deal : r.job) + '" will be restored to active status and will no longer appear as Cancelled.';
+    closeModal(ccModal);
+    openModal('unarchive-confirm-modal');
+  } else {
+    document.getElementById('archive-confirm-type').textContent = typeLabel;
+    document.getElementById('archive-confirm-body').textContent =
+      '"' + (type === 'deal' ? r.deal : r.job) + '" will be archived. It will appear as Cancelled when Show Archived is on.';
+    closeModal(ccModal);
+    openModal('archive-confirm-modal');
+  }
+}
+
+function commitArchive() {
+  var data = openRecordList === 'sales' ? salesData : jobsData;
+  var r = data.find(function(x){ return x.id === openRecordId; });
+  r.archived = true;
+  closeModal('archive-confirm-modal');
+  if (openRecordList === 'sales') renderSales();
+  else renderJobs();
+  showToast((openRecordList === 'sales' ? 'Deal' : 'Job') + ' archived. Toggle "Show Archived" to see it.', false);
+}
+
+function commitUnarchive() {
+  var data = openRecordList === 'sales' ? salesData : jobsData;
+  var r = data.find(function(x){ return x.id === openRecordId; });
+  r.archived = false;
+  closeModal('unarchive-confirm-modal');
+  if (openRecordList === 'sales') renderSales();
+  else renderJobs();
+  showToast((openRecordList === 'sales' ? 'Deal' : 'Job') + ' restored to active status.', false);
+}
+
+// ═══════════════════════════════════════
+// STAGE MOVE
+// ═══════════════════════════════════════
+function openStageModal(list) {
+  pendingStageList = list || openRecordList;
+  selectedStageName = null;
+  document.querySelectorAll('.stage-option').forEach(function(o){ o.classList.remove('selected'); });
+  openModal('stage-modal');
+}
+function selectStage(el, name) {
+  document.querySelectorAll('.stage-option').forEach(function(o){ o.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedStageName = name;
+}
+function confirmStageMove() {
+  if (!selectedStageName) { alert('Please select a stage.'); return; }
+  var data = pendingStageList === 'sales' ? salesData : jobsData;
+  var r = data.find(function(x){ return x.id === openRecordId; });
+  if (r) {
+    r.stage = selectedStageName;
+    var stageEl = document.getElementById(pendingStageList === 'sales' ? 'deal-cc-stage' : 'job-cc-stage');
+    if (stageEl) stageEl.textContent = selectedStageName;
+    if (pendingStageList === 'sales') renderSales();
+    else renderJobs();
+  }
+  closeModal('stage-modal');
+  showToast('Stage updated to "' + selectedStageName + '."', false);
+}
+
+// ═══════════════════════════════════════
+// KEBAB / MODAL HELPERS
+// ═══════════════════════════════════════
+function toggleKebab(id) {
+  var menu = document.getElementById(id);
+  var isOpen = menu.classList.contains('open');
+  closeAllKebabs();
+  if (!isOpen) menu.classList.add('open');
+}
+function closeAllKebabs() {
+  document.querySelectorAll('.kebab-menu').forEach(function(m){ m.classList.remove('open'); });
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.cc-kebab')) closeAllKebabs();
+});
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(overlay.id); });
+});
+
+// ═══════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════
+function showToast(msg, warn) {
+  var t = document.getElementById('toast');
+  document.getElementById('toast-text').textContent = msg;
+  t.className = 'toast-msg show' + (warn ? ' warning' : '');
+  setTimeout(function(){ t.classList.remove('show'); }, 3500);
+}
+
+// ═══════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════
+function showView(id) {
+  document.querySelectorAll('.view-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.sidebar-item').forEach(function(i){ i.classList.remove('active'); });
+  var panel = document.getElementById('view-' + id);
+  var navEl = document.getElementById('nav-' + id);
+  if (panel) panel.classList.add('active');
+  if (navEl) navEl.classList.add('active');
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+renderSales();
+renderJobs();
+document.getElementById('nav-sales').classList.add('active');
 </script>
 </body>
 </html>
